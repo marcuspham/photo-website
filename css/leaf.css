@@ -3,8 +3,6 @@ body {
 }
 
 .leaf {
-	background-color: lightgreen;
-	border: 2px solid green;
 	width: 70%;
 	height: 100%;
 	position: absolute;
