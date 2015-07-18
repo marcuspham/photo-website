@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Megrim);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+blockquote {
+	border:none;
+	font-family: 'Raleway';
+	margin-top: 30px;
+	position: relative; 
+	max-width: 600px; 
+	margin: 0 auto;
+	padding-left: 0.4em; 
+	vertical-align: middle;
+}
+
+blockquote h3 {
+	font-size:48px;
+}
+
+blockquote h3:before { 
+	content: "\201C";
+	font-weight: bold;
+	font-size:100px;
+	color:lightblue;
+	position: absolute; 
+	top: -0.2em;
+	left: -0.5em; 
+	font-family: 'Georgia'; 
+} 
+
+blockquote h3:after { 
+	content: "\201D";
+	font-weight: bold;
+	font-size:100px;
+	color:lightblue;
+	position: absolute; 
+	bottom: -0.6em;
+	right: 0; 
+	font-family: 'Georgia'; 
+}
+
