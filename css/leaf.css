@@ -1,0 +1,21 @@
+body {
+	background-color: black;
+}
+
+.leaf {
+	background-color: lightgreen;
+	border: 2px solid green;
+	width: 70%;
+	height: 100%;
+	position: absolute;
+}
+
+#leaf1 {
+	left: 0;
+	top: 0;
+}
+
+#leaf2 {
+	right: 0;
+	top: 0;
+}
