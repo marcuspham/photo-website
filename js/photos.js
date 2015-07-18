@@ -1,10 +1,12 @@
 "use strict";
 
 var data;
+var photoArray = ['IMG_0006.JPG', 'IMG_6682.JPG', 'IMG_8041.JPG', 'IMG_8042.JPG', 'IMG_8565.JPG'];
 
-window.onload(function() {
-	getImages();
-});
+window.onload = function() {
+	displayPhotos();
+	// getImages();
+};
 
 function getImages() {
 	$.get(url).success(function(response) {
@@ -12,9 +14,10 @@ function getImages() {
 		data.push(img);
 	});
 }
+
 function displayPhotos() {
-	for (var i = 0; i < data.length; i++) {
-		$("#photo-container").append('<img src="' + data[i] + '" />');
+	for (var i = 0; i < photoArray.length; i++) {
+		$("#photo-container").append('<img src="img/Abelia/' + photoArray[i] + '" />');
 	}
 }
 
