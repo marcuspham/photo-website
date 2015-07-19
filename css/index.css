@@ -3,55 +3,16 @@
 @import url(http://fonts.googleapis.com/css?family=Lato);
 
 body {
-	position: relative;
-	height: 100%;
-}
-
-#menu {
-	position: fixed;
-	top: 10px;
-	right: 10px;
-	z-index: 2;
-	margin: 0;
-}
-
-#title {
-	color: white;
-	background-color: rgba(0, 0, 0, 0.7);
-	height: 150px;
-	width: 150px;
-	position: fixed;
-	top: 0;
-	left: 20px;
-	z-index: 2;
-	padding: 10px;
-	border: 1px solid white;
-	border-top: none;
-}
-
-h1 {
-	font-family: 'Megrim';
-	font-size: 45px;
-}
-
-.nav-pills>li{
-	font-family: 'Megrim';
-	color: white;
-	vertical-align: middle;
-	padding: 0;
-	margin-left: 10px;
-}
-
-.nav>li>a {
-	color: white;
-	padding: 10px 30px;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 
 #myCarousel {
 	width: 80%;
 	height: 100%;
 	position: relative;
-	left: 20%;
+	left: 275px;
 }
 
 h2 {
@@ -122,6 +83,7 @@ div.container.fill {
 	padding: 0;
 	margin: 0;
 	background-color: black;
+	z-index: -1;
 }
 
 .carousel-inner {
@@ -129,6 +91,7 @@ div.container.fill {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	z-index: 0;
 }
 
 .carousel-inner .item {
@@ -136,6 +99,7 @@ div.container.fill {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	z-index: 0;
 }
 .carousel-inner .item img {
 	width: 100%;
@@ -146,6 +110,9 @@ div.container.fill {
 }
 
 .carousel-indicators {
+	left: 0;
+ 	width: 80%;
+ 	margin: 0 auto;
 	z-index: 2;
 }
 
@@ -153,55 +120,59 @@ div.container.fill {
 	z-index: 2;
 }
 
-.overlay {
-    position:absolute;
-    z-index:999;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    opacity:0.25;
-    background:url("http://i.imgur.com/pVNSmP4.png");
+/* Stack Overflow carousel */
+#myCarousel {
+    width: 100%;
+    left: 275px;
 }
 
-#dot-matrix {
-    background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
-    height: 100%;
-    width: 100%;
+#carousel-dot-overlay {
+	position: absolute;
+	height: 100%;
+	width: 80%;	
+	background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
+	opacity: 0.35;
+	z-index: 1;
+}
+
+.carousel-control {
     position: fixed;
-    top: 0;
     z-index: 2;
 }
-
-.sidebar {
-	position: fixed;
-	z-index: 0;
-	top: 0;
+.carousel-control.left{
+    left: 275px;
+    z-index: 2;
+}
+.carousel-inner .item {
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.carousel-caption {
+	position: absolute;
 	left: 0;
-	height: 100%;
-	width: 20%;
-	background-image: url(../img/Aphelandra/IMG_2184b.JPG);
-	background-size: contain;
-	background-attachment: fixed;
-	border-right: solid 1px white;
+	right: 0;
+	width: 80%;
+	z-index: 50;
 }
-
-#sidebar-img {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0px;
-	left: 0px;	
-	background-color: rgba(0, 0, 0, 0.87);
-	z-index: 2;
+.feat1 {
+    background: url(../img/Acca/IMG_7147_2.JPG) no-repeat center center; 
 }
-
-#test {
-	position: absolute;
-	height: 100px;
-	width: 100px;
-	top: 200px;
-	left: 200px;	
-	background-image: url(../img/Aphelandra/IMG_2184b.JPG)
-	z-index: 2;
+.feat2 {
+    background: url(../img/Abelmoschus/IMG_7831.JPG) no-repeat center center; 
+}
+.feat3 {
+    background: url(../img/Aechmea/IMG_4105.JPG) no-repeat center center; 
+}
+.feat4 {
+    background: url(../img/Acer/IMG_8201.JPG) no-repeat center center; 
+}
+.feat5 {
+    background: url(../img/Adromischus/IMG_3703.JPG) no-repeat center center; 
+}
+.feat6 {
+    background: url(../img/Annona/IMG_0686_2.JPG) no-repeat center center fixed; 
 }
