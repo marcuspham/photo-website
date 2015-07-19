@@ -1,31 +1,26 @@
-/*body {
-	color: white;
-	background-color: gray;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 75%;
-}
-*/
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
 body {
- 	background-image: url("flower.jpg");
+ 	background-image: url("../img/Argyroderma/IMG_1278.JPG");
  	background-size: cover;
 	background-attachment: fixed; 
-	padding: 5%;
+	font-family: "Raleway";
+	font-size: 12pt;
+	color: white;
+}
+.sideBar {
+	max-width: 10%;
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .overlay {
 	position: relative;
 	z-index: 10;
-	background-color: rgba(255, 255, 255,0.5); /*dim the background*/;
+	background-color: rgba(0, 0, 0, 0.7); /*dim the background*/;
 	margin: 0 auto;
 	max-width: 75%;
-	padding: 1%;
+	padding: 2%;
 }
-/*#photographer {
-	max-width: 75%;
-	max-height: 400px;
-} */
 h1 {
 	text-align: center;
 }
