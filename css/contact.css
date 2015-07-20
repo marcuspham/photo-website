@@ -76,12 +76,8 @@ body {
 	margin-bottom: 10px;
 }
 
-#phone {
-	background-color: rgba(204, 0, 102, 0.7);
-}
-
-#email {
-	background-color: rgba(255, 153, 0, 0.7);
+#phone, #email, #social {
+	background-color: rgba(153, 204, 0, 0.7);
 }
 
 #icon-wrapper text {
@@ -112,7 +108,6 @@ body {
 	height: 88px;
 	width: 88px;
 	padding:15px;
-	background-color: rgba(0, 102, 255, 0.7);
 }
 
 .col-centered{
@@ -135,7 +130,7 @@ body {
 }
 
 #send-button {
-	background-color: rgba(51, 153, 51, 0.7);
+	background-color: rgba(153, 204, 0, 0.7);
 	height: 88px;
 	width: 88px;
 	border: black;
@@ -145,4 +140,22 @@ body {
 
 #phone:hover, #email:hover, #social:hover, #send-button:hover {
 	background-color: transparent;
+}
+
+#leaveNote p {
+	z-index: 50;
+}
+
+#leaveNote .form-control {
+	background-color: rgba(255, 255, 255, 0.25);
+	border-radius: 0;
+	color: white;
+}
+
+.form-control:focus {
+	border-color: white;
+}
+
+text {
+	font-family: 'Raleway';
 }
