@@ -15,20 +15,82 @@
 	</head>
 
 	<body> 
-		<ul class="nav nav-pills">
-			<li role="presentation" id="title-logo">Nam Pham</li>
-			<li role="presentation" class="active"><a href="#" class="brackets"><span class="glyphicon glyphicon-home"> HOME</span></a></li>
-			<li role="presentation"><a href="#" class="brackets"><span class="glyphicon glyphicon-user"> ABOUT</span></a></li>
-			<li role="presentation"><a href="#" class="brackets"><span class="glyphicon glyphicon-picture"> PHOTOS</span></a></li>
-			<li role="presentation"><a href="#" class="brackets"><span class="glyphicon glyphicon-envelope"> CONTACT</span></a></li>
-		</ul>
+		<div class="sidebar"> 
+			<div id="sidebar-overlay"></div>
+			<div id="dot-overlay"></div>
+			<a href="index.html">
+				<div id="title">
+					<h1>Nam Pham</h1>
+				</div>
+			</a>	
+			<div id="menu-wrapper">
+				<ul id="menu" class="nav nav-pills nav-stacked">
+					<li role="presentation"><a href="index.html" class="brackets">HOME</a></li>
+					<li role="presentation"><a href="about.html" class="brackets">ABOUT</a></li>
+					<li role="presentation"><a href="photos.html" class="brackets">PHOTOS</a></li>
+					<li role="presentation" class="active"><a href="contact.html" class="brackets">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>
+
 		<div id="main">
-			<h1> Nam Pham Photography </h1>
-			<p>	Based in Seattle <br/>
-				Email: <a href="mailto:phamplatinum@gmail.com"> phamplatinum@gmail.com </a> <br/>
-				Phone: <a href="tel:720-251-9282"> 720-251-9282 </a> <br/>
-				Twitter: <a href="https://twitter.com/intent/follow?screen_name=pham720&tw_p=followbutton"><img id="twitter" src="http://www.tapir.caltech.edu/~sarah.gossan/twitter3.png"/></a> 
-			</p>
+			<div id="main-overlay"></div>
+			<div id="getInTouch" style="overflow:auto">
+				<p> Get in touch </p>
+				<div id="phone-wrapper" class="col-sm-2 col-sm-offset-3">
+					<h1> PHONE </h1>
+					<div id="icon-wrapper">
+						<a href="tel:720-251-9282"><span id="phone" class="glyphicon glyphicon-earphone img-circle"></span></a> <br/>
+						<text>720-251-9282</text>
+					</div>
+				</div>
+				<div id="email-wrapper" class="col-sm-2">
+					<h1> EMAIL </h1>
+					<div id="icon-wrapper">
+						<a href="mailto:phamplatinum@gmail.com"><span id="email" class="glyphicon glyphicon-envelope img-circle"></span></a> <br/> 
+						<text> phamplatinum <br/> @gmail.com </text>
+					</div>
+				</div>
+				<div id="social-wrapper" class="col-sm-2">
+					<h1> TWITTER </h1>
+					<div id="icon-wrapper">
+						<a href="https://twitter.com/intent/follow?screen_name=pham720&tw_p=followbutton"><img id="social" class="img-circle" src="http://app-assets3.sportngin.com/images/twitter-bird-dark-bgs.png?1436797972"/></a> <br/>
+						<text> @pham720 </text>
+					</div>
+				</div>
+			</div> 
+
+			<div id="leaveNote">
+				<p> Leave a note </p>
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+				    	<div class="col-xs-6 col-centered">
+				      		<input type="email" class="form-control" id="yourName" placeholder="Your name">
+				    	</div>
+				  	</div>
+					<div class="form-group">
+				    	<div class="col-xs-6 col-centered">
+				      		<input type="email" class="form-control" id="yourEmail" placeholder="Your email">
+				    	</div>
+				  	</div>
+				  	<div class="form-group">
+				    	<div class="col-xs-6 col-centered">
+				      		<input type="tel" class="form-control" id="yourPhone" placeholder="Your phone number">
+				    	</div>
+				  	</div>
+				  	<div class="form-group">
+				    	<div class="col-xs-6 col-centered">
+				      		<textarea rows="5" class="form-control" id="yourMsg" placeholder="Your message"></textarea>
+				    	</div>
+				  	</div>
+				  	<div class="form-group"> 
+					  	<div id="send-wrapper">
+					  		<button id="send-button" type="submit" class="btn btn-default"><span id="send" class="glyphicon glyphicon-send"></span></button>
+					  	</div>
+				  	</div>
+				</form>
+			</div>
+
 		</div>
 	</body>
 </html> 

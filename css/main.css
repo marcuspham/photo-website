@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Megrim);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
 
 .sidebar {
 	position: fixed;
@@ -31,7 +32,7 @@
 	height: 100%;
 	width: 100%;	
 	background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
-	opacity: 0.5;
+	opacity: 0.8;
 	z-index: 2;
 }
 
@@ -118,4 +119,123 @@
   bottom: auto;
   top: 0;
   width: 50%;
+}
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 275px;
+	background: url(../img/Aphelandra/IMG_2184b.JPG) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	border-right: solid 1px white;
+	z-index: 0;
+}
+
+#sidebar-overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;	
+	background-color: rgba(0, 0, 0, 0.87);
+	z-index: 1;
+}
+
+#dot-overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;	
+	background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
+	opacity: 0.5;
+	z-index: 2;
+}
+
+#title {
+	position: fixed;	
+	top: 0;
+	left: 70px;
+	height: 135px;
+	width: 135px;	
+	padding: 10px;
+	border: 3px double rgba(295, 295, 295, 0.6);
+	border-top: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);	
+	z-index: 2;
+}
+
+#title h1 {
+	position: fixed;
+	height: 135px;
+	width: 135px;	
+	font-family: 'Megrim';
+	font-size: 45px;
+	margin-top: 5px;
+	margin-left: 5px;
+	z-index: 2;
+}
+
+#menu {
+	position: relative;
+	top: 150px;
+	margin: 0;
+	width: 100%;
+	z-index: 3;
+}
+
+.nav-pills>li>a {
+	font-family: 'Quicksand';
+	color: white;
+	background-color: transparent;
+	border-radius: 0;
+	opacity: 0.5;
+	width: 100%;
+	text-align: center;
+}
+
+.nav-pills>li.active>a {
+	background-color: transparent;
+	opacity: 1;
+}
+
+.nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: transparent;
+	opacity: 1;
+}
+
+.nav-pills>li>a:focus, .nav-pills>li>a:hover {
+	background-color: transparent;
+	opacity: 1;
+}	
+
+.nav-pills>li>a::after,
+.nav-pills>li>a::before {
+  backface-visibility: hidden;
+  border: 1px solid transparent;
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.nav-pills>li>a:hover::after,
+.nav-pills>li>a:hover::before {
+  backface-visibility: hidden;
+  border-color: rgba(295, 295, 295, 0.6);
+  transition: width 350ms ease-in-out;
+  width: 30%;
+}
+
+.nav-pills>li>a:hover::before {
+  bottom: auto;
+  top: 0;
+  width: 30%;
 }
