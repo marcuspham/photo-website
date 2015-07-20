@@ -1,24 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Megrim);
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+@import url(http://fonts.googleapis.com/css?family=Lato);
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 
-h1 {
-	font-family: 'Raleway';
-	font-size: 24px;
+body, #main-overlay {
+	left: 275px;
+	width: calc(100% - 275px);
+	height: 100%;
+	top: 0;
+	padding: 0;
+	margin: 0;
 }
 
-p {
-	font-family: 'Raleway';
-	font-size: 16px;
+body {
+	position: absolute;
+	background-image: url(../img/Abelia/IMG_8565.JPG);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#main-overlay {
+	position: fixed;
+}
+
+#main-overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: -1;
 }
 
 #main {
-	width: 500px;
-	margin: 0 auto;
-}
-
-#twitter {
-	height: 20px;
-	width: auto;
+	width: 100%;
+	height: 100%;
 }
 
 #main a:link, a:visited {
@@ -30,7 +42,120 @@ p {
 	color: #9999CC;
 }
 
-#twitter:hover {
-	opacity: 0.6;
+#getInTouch, #leaveNote {
+	margin: 20px;
 }
 
+#getInTouch p, #leaveNote p {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Raleway';
+	color: white;
+}
+
+#getInTouch div {
+	display: inline-block;
+	text-align: center;
+}
+
+#getInTouch h1 {
+	font-family: 'Quicksand';
+	font-size: 18px;
+	color: white;
+}
+
+#phone, #email, #social, #send-button {
+	border: 2px solid white !important;
+}
+
+#phone, #email, #social {
+	font-size: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#phone, #email, #social {
+	background-color: rgba(153, 204, 0, 0.7);
+}
+
+#icon-wrapper text {
+	color: transparent;
+	-webkit-transform:translateY(-200%);
+    -moz-transform:translateY(-200%);
+    transform:translateY(-100%);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#icon-wrapper:hover text {
+	color: white;
+	-webkit-transform:translateY(0px);
+    -moz-transform:translateY(0px);
+    transform:translateY(0px) -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#phone, #email {
+	color: white;
+	padding: 30px;
+}
+
+#social {
+	height: 88px;
+	width: 88px;
+	padding:15px;
+}
+
+.col-centered{
+	float: none;
+	margin: 0 auto;
+}
+
+#send-wrapper {
+	text-align: center;
+}
+
+#send {
+	font-size: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: white;
+	border-radius: 50%;
+}
+
+#send-button {
+	background-color: rgba(153, 204, 0, 0.7);
+	height: 88px;
+	width: 88px;
+	border: black;
+	border-radius: 50%;
+	z-index: 2;
+}
+
+#phone:hover, #email:hover, #social:hover, #send-button:hover {
+	background-color: transparent;
+}
+
+#leaveNote p {
+	z-index: 50;
+}
+
+#leaveNote .form-control {
+	background-color: rgba(255, 255, 255, 0.25);
+	border-radius: 0;
+	color: white;
+}
+
+.form-control:focus {
+	border-color: white;
+}
+
+text {
+	font-family: 'Raleway';
+}
