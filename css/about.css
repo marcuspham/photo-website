@@ -48,6 +48,7 @@ body {
     top: -90px;
 }
 .hex {
+	z-index: -1;
     margin-top: 90px;
     width: 312px;
     height: 180px;
