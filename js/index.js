@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function(e) {   
   $('#hamburger').click(function() {
     $('.sidebar').toggle();
@@ -21,14 +20,3 @@ $(window).resize(function() {
     $('#hamburger').removeClass('active');
   }
 });
-=======
-"use strict";
-
-window.onload = function() {
-	$('#logo-bg').click(function() { reveal() });
-};
-
-function reveal() {
-	$('#logo-bg').velocity("fadeOut", 500);
-}
->>>>>>> 22c1f492d9f9dbc4406499d43cbf4f3d5e833517

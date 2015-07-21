@@ -1,27 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
+		<title>Photos</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Nam Pham Photography - Photos Page">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="Matthew and Marcus Pham">
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<!-- Velocity.js -->
   		<script src="https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.min.js"></script>
   		<!-- Velocity's UI Pack -->
   		<script src="https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.ui.js"></script>
-		<script src="js/photos.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/photos.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
 		<link href="css/photos.css" rel="stylesheet" type="text/css" />
-		<title>Photos</title>
 	</head>
+
 	<body>
-		<h1>Nam Pham's Photos</h1>
-		<div id="photo-container">
-			<div class="genus-container" id="abelia-container">
-				<span class="genus">Abelia</span>
-			</div>
-			<div class="genus-container" id="abeliophyllum-container">
-				<span class="genus">Abeliophyllum</span>
-			</div>
-			<div class="genus-container" id="abelmoschus-container">
-				<span class="genus">Abelmoschus</span>
+
+		<!-- Copy sidebar/menu into all pages -->
+		<span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span>
+
+		<div class="sidebar"> 
+			<div id="sidebar-overlay"></div>
+			<div id="sidebar-dot-overlay"></div>
+			<a href="index.html">
+				<div id="title">
+					<h1>Nam Pham</h1>
+				</div>
+			</a>	
+			<div id="menu-wrapper">
+				<ul id="menu" class="nav nav-pills nav-stacked">
+					<li role="presentation" class="active"><a href="index.html">HOME</a></li>
+					<li role="presentation"><a href="about.html">ABOUT</a></li>
+					<li role="presentation"><a href="photos.html">PHOTOS</a></li>
+					<li role="presentation"><a href="contact.html">CONTACT</a></li>
+				</ul>
 			</div>
 		</div>
+		<!-- End of sidebar/menu -->
+
+    	<div id="main">
+      		<div id="main-overlay"></div>
+      			<h1>Nam Pham's Photos</h1>
+				<div id="photo-container">
+					<div class="genus-container" id="abelia-container">
+						<span class="genus">Abelia</span>
+				</div>
+				<div class="genus-container" id="abeliophyllum-container">
+					<span class="genus">Abeliophyllum</span>
+				</div>
+				<div class="genus-container" id="abelmoschus-container">
+					<span class="genus">Abelmoschus</span>
+				</div>
+			</div>
+		</div>
+
 	</body>
+
 </html>
