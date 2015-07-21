@@ -34,8 +34,33 @@ body {
   	color: white;
   	width: 75%;
   	margin: 0 auto;
-<<<<<<< HEAD
 }
-=======
+.hex {
+	margin-left: 30px;
 }
->>>>>>> dc12b3fb45028ba53dcb788bb1f943c20d18bfce
+.hex:before {
+    content: " ";
+    width: 0; height: 0;
+    border-bottom: 90px solid #8AA37B;
+    border-left: 156px solid transparent;
+    border-right: 156px solid transparent;
+    position: absolute;
+    top: -90px;
+}
+.hex {
+    margin-top: 90px;
+    width: 312px;
+    height: 180px;
+    background-color: #8AA37B;
+    position: relative;
+    opacity: 0.5;
+}
+.hex:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -90px;
+    border-top: 90px solid #8AA37B	;
+    border-left: 156px solid transparent;
+    border-right: 156px solid transparent;
+}
