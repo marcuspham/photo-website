@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<!-- Leaf transition -->
 	<head>
-
-		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<!-- Velocity.js -->
-  		<script src="https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.min.js"></script>
-  		<!-- Velocity's UI Pack -->
-  		<script src="https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.ui.js"></script>
-
-		<link href="css/leaf.css" rel="stylesheet" type="text/css" />
-
 		<title>Photography by Nam Pham</title>
 		<meta charset="UTF-8">
 		<meta name="description" content="Nam Pham Photography - Home Page">
@@ -19,54 +9,38 @@
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  		<script src="js/leaf.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link href="css/leaf.css" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/index.css">
 		<link rel="shortcut icon" href="">
-
 	</head>
 
 	<body>
-		<!--
 
-			WORK-IN-PROGRESS
+		<!-- Copy sidebar/menu into all pages -->
+		<span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span>
 
-		<div id="cover">
-			<img src="http://wallpup.com/wp-content/uploads/2013/04/Cool-Background-Green-Leaf.jpg" alt="bg-leaf" />
-			<div id="logo-bg"><h1>Nam Pham</h1></div>
+		<div class="sidebar"> 
+			<div id="sidebar-overlay"></div>
+			<div id="sidebar-dot-overlay"></div>
+			<a href="index.html">
+				<div id="title">
+					<h1>Nam Pham</h1>
+				</div>
+			</a>	
+			<div id="menu-wrapper">
+				<ul id="menu" class="nav nav-pills nav-stacked">
+					<li role="presentation" class="active"><a href="index.html">HOME</a></li>
+					<li role="presentation"><a href="about.html">ABOUT</a></li>
+					<li role="presentation"><a href="photos.html">PHOTOS</a></li>
+					<li role="presentation"><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</div>
 		</div>
-
-		-->
-
-		<ul class="nav nav-pills">
-			<li role="presentation" id="title-logo">Nam Pham</li>
-			<li role="presentation" class="active"><a href="#" class="brackets"><span class="glyphicon glyphicon-home"> HOME</span></a></li>
-			<li role="presentation"><a href="#" class="brackets"><span class="glyphicon glyphicon-user"> ABOUT</span></a></li>
-			<li role="presentation"><a href="#" class="brackets"><span class="glyphicon glyphicon-picture"> PHOTOS</span></a></li>
-			<li role="presentation"><a href="#" class="brackets"><span class="glyphicon glyphicon-envelope"> CONTACT</span></a></li>
-		</ul>
-
-		<div class="container">
-		    <!-- Jssor Slider Begin -->
-		    <div id="slider1_container" style="display: none; position: relative; margin: 0 auto; width: 980px; height: 380px; overflow: hidden;">
-			...
-		    </div>
-		    <!-- Jssor Slider End -->
-		</div>
-	
-
-		<div class="container">
-		  <br>
-		
-
-		  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-		    <!-- Indicators -->
+		<!-- End of sidebar/menu -->
 
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		  <!-- Carousel items -->
 		    <ol class="carousel-indicators">
 		      	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		      	<li data-target="#myCarousel" data-slide-to="1"></li>
@@ -114,7 +88,6 @@
 		        </div>
 		    </div>
 		  </div>
-		  <!-- Carousel nav -->
 		    	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 		      		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 		      		<span class="sr-only">Previous</span>
@@ -124,31 +97,6 @@
 		      		<span class="sr-only">Next</span>
 		    	</a>
 		</div>
-
-		<div class="sidebar"> 
-			<div id="sidebar-overlay"></div>
-			<div id="dot-overlay"></div>
-			<a href="index.html">
-				<div id="title">
-					<h1>Nam Pham</h1>
-				</div>
-			</a>	
-			<div id="menu-wrapper">
-				<ul id="menu" class="nav nav-pills nav-stacked">
-					<li role="presentation" class="active"><a href="index.html" class="brackets">HOME</a></li>
-					<li role="presentation"><a href="about.html" class="brackets">ABOUT</a></li>
-					<li role="presentation"><a href="photos.html" class="brackets">PHOTOS</a></li>
-					<li role="presentation"><a href="contact.html" class="brackets">CONTACT</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<!-- <h2><span>Strange obsession <br/> with botanical photography<span></h2> -->
-		<!--
-		<div id="container">
-			<div id="leaf1" class="leaf"></div>
-			<div id="leaf2" class="leaf"></div>
-		</div> -->
 
 	</body>
 

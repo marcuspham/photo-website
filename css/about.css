@@ -1,12 +1,3 @@
-body, #main-overlay {
-	left: 275px;
-	width: calc(100% - 275px);
-	height: 100%;
-	top: 0;
-	padding: 0;
-	margin: 0;
-}
-
 body {
 	position: absolute;
  	background-image: url("../img/Argyroderma/IMG_1278.JPG");
@@ -14,24 +5,46 @@ body {
 	background-attachment: fixed; 
 }
 
-#main-overlay {
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.7);
-	z-index: -1;
-}
-
-#main h1 {
-	text-align: center;
-	font-size: 25px;
-	font-family: 'Raleway';
-	color: white;
-}
-
 #main p {
-	position: relative;
-	font-family: 'Quicksand';
   	font-size: 12pt;
-  	color: white;
   	width: 75%;
   	margin: 0 auto;
+}
+
+.hex-layers {
+	width: 100%;
+}
+
+.hex {
+	margin: 10%;
+}
+
+.hex:before {
+    content: " ";
+    width: 0; height: 0;
+    border-bottom: 90px solid #8AA37B;
+    border-left: 156px solid transparent;
+    border-right: 156px solid transparent;
+    position: absolute;
+    top: -90px;
+}
+
+.hex {
+	z-index: -1;
+    margin-top: 90px;
+    width: 312px;
+    height: 180px;
+    background-color: #8AA37B;
+    position: relative;
+    opacity: 0.5;
+}
+
+.hex:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -90px;
+    border-top: 90px solid #8AA37B;
+    border-left: 156px solid transparent;
+    border-right: 156px solid transparent;
 }
