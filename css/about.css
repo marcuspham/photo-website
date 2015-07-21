@@ -69,3 +69,6 @@ body {
     border-left: 156px solid transparent;
     border-right: 156px solid transparent;
 }
+.hex:hover {
+    opacity: 0.1;
+}
