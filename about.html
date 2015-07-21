@@ -8,7 +8,8 @@
     <meta name="author" content="Christy Pham">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="js/about.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript"src="js/contact.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="css/main.css">
@@ -16,9 +17,12 @@
   </head>
 
   <body> 
+    <!-- Copy sidebar/menu into all pages -->
+    <span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span>
+
     <div class="sidebar"> 
       <div id="sidebar-overlay"></div>
-      <div id="dot-overlay"></div>
+      <div id="sidebar-dot-overlay"></div>
       <a href="index.html">
         <div id="title">
           <h1>Nam Pham</h1>
@@ -26,13 +30,14 @@
       </a>  
       <div id="menu-wrapper">
         <ul id="menu" class="nav nav-pills nav-stacked">
-          <li role="presentation"><a href="index.html" class="brackets">HOME</a></li>
-          <li role="presentation" class="active"><a href="about.html" class="brackets">ABOUT</a></li>
-          <li role="presentation"><a href="photos.html" class="brackets">PHOTOS</a></li>
-          <li role="presentation"><a href="contact.html" class="brackets">CONTACT</a></li>
+          <li role="presentation" class="active"><a href="index.html">HOME</a></li>
+          <li role="presentation"><a href="about.html">ABOUT</a></li>
+          <li role="presentation"><a href="photos.html">PHOTOS</a></li>
+          <li role="presentation"><a href="contact.html">CONTACT</a></li>
         </ul>
       </div>
     </div>
+    <!-- End of sidebar/menu -->
 
     <div id="main">
       <div id="main-overlay"></div>

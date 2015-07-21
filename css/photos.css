@@ -1,19 +1,12 @@
 body {
-
-}
-
-h1 {
-	text-align: center;
+	position: absolute;
 }
 
 img {
-	max-width: 100px;
-	max-height: 100px;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
 	display: none;
-}
-
-img:hover {
-	display: inline-block;
 }
 
 img:first-of-type {
@@ -26,8 +19,14 @@ img:first-of-type {
 	position: relative;
 }
 
+.genus-container:hover {
+	cursor: pointer;
+}
+
 .genus {
 	position: absolute;
+	left: 0;
+	top: 0;
 	text-align: center;
 	background-color: rgba(255, 255, 255, 0.8);
 	width: 100%;
