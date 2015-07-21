@@ -8,10 +8,6 @@ img {
 	display: none;
 }
 
-img:hover {
-	display: inline-block;
-}
-
 img:first-of-type {
 	display: inline-block;
 
@@ -20,6 +16,10 @@ img:first-of-type {
 .genus-container {
 	display: inline-block;
 	position: relative;
+}
+
+.genus-container:hover {
+	cursor: pointer;
 }
 
 .genus {
