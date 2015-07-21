@@ -40,21 +40,27 @@ function displayPhotos() {
 	var keys = Object.keys(photoArray);
 	for (var i = 0; i < keys.length; i++) {
 		var genus = keys[i];
-		$("#photo-container").append('<div class="genus-container"</div>');
-		$(".genus-container:last").append('<span class="genus">' + genus + '</span>');
+		$("#photo-container").append('<div class="genus-container" name="' + genus + '"</div>');
+		$(".genus-container:last-of-type").append('<span class="genus">' + genus + '</span>');
 		for (var j = 0; j < photoArray[genus].length; j++) {
-			$(".genus-container:last").append('<img src="img/' + genus + '/' + photoArray[genus][j] + '" />');
+			$(".genus-container:last-of-type").append('<img src="img/' + genus + '/' + photoArray[genus][j] + '" />');
 		}
 	}
 }
 
 function toggleGenus() {
 	$(".genus-container").on("click", function() {
-		if ($(this).children("img:last").css("display") == 'none') {
+		if ($(this).children("img:last-of-type").css("display") == 'none') {
+			$("#photo-container").prepend('<div id="description"></div>');
+			$("#description").prepend('<hr width="50%"></hr>');
+			$(this).clone().prependTo($("#description"));
+			$(".genus-container:first-of-type").children("img").css("display", "inline-block");
+			var genus = $(this).attr('name');
+			$("#photo-container").prepend('<h2>' + genus + '</h2>');
 			$(this).children("img").css("display", "inline-block");
 		} else {
 			$(this).children("img").css("display", "none");
-			$(this).children("img:first").css("display", "inline-block");
+			$(this).children("img:first-of-type").css("display", "inline-block");
 		}
 	});
 }
@@ -140,7 +146,7 @@ function parseFileToJSON() {
 	"img/Acer/IMG_8201.JPG",
 	"img/Acer/IMG_9644.JPG",
 	"img/Acer/IMG_9649.JPG",
-	"img/Acer/IMG_9669.JPG",
+	"img/Acer/IMG_9669.JPG"/*,
 	"img/Achillea/IMG_0480.JPG",
 	"img/Achillea/IMG_2021.JPG",
 	"img/Achillea/IMG_2026.JPG",
@@ -566,14 +572,14 @@ function parseFileToJSON() {
 	"img/Azolla/IMG_3196.JPG",
 	"img/Azolla/IMG_8593.JPG",
 	"img/Azorella/IMG_3418.JPG",
-	"img/Azorella/IMG_3420.JPG"];
+	"img/Azorella/IMG_3420.JPG"*/];
 	for (var i = 0; i < textFile.length; i++) {
 		var line = textFile[i];
 		var tokens = line.split("/");
 		var genus = tokens[1];
 		var imageURL = tokens[2];
 		var image = new Image();
-		image.src = imageURL;
+		image.src = line;
 		images.push(image);
 		if (!photoArray[genus]) {
 			photoArray[genus] = [];

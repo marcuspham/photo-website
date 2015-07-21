@@ -11,7 +11,10 @@ img {
 
 img:first-of-type {
 	display: inline-block;
+}
 
+#photo-container {
+	margin-left: 2.5%;
 }
 
 .genus-container {
