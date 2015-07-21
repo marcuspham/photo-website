@@ -1,29 +1,37 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+body, #main-overlay {
+	left: 275px;
+	width: calc(100% - 275px);
+	height: 100%;
+	top: 0;
+	padding: 0;
+	margin: 0;
+}
 
 body {
+	position: absolute;
  	background-image: url("../img/Argyroderma/IMG_1278.JPG");
  	background-size: cover;
 	background-attachment: fixed; 
-	font-family: "Raleway";
-	font-size: 12pt;
-	color: white;
-}
-.sideBar {
-	max-width: 10%;
-	background-color: rgba(0, 0, 0, 0.7);
 }
 
-.overlay {
-	position: relative;
-	z-index: 10;
-	background-color: rgba(0, 0, 0, 0.7); /*dim the background*/;
-	margin: 0 auto;
-	max-width: 75%;
-	padding: 2%;
+#main-overlay {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: -1;
 }
-h1 {
+
+#main h1 {
 	text-align: center;
+	font-size: 25px;
+	font-family: 'Raleway';
+	color: white;
 }
-p {
-	padding: 2px;
+
+#main p {
+	position: relative;
+	font-family: 'Quicksand';
+  	font-size: 12pt;
+  	color: white;
+  	width: 75%;
+  	margin: 0 auto;
 }

@@ -1,1 +1,1 @@
-$().
+$("#overlay").velocity("slideDown", {duration: 500});
