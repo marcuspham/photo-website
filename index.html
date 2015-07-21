@@ -2,6 +2,15 @@
 <html>
 	<!-- Leaf transition -->
 	<head>
+
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<!-- Velocity.js -->
+  		<script src="https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.min.js"></script>
+  		<!-- Velocity's UI Pack -->
+  		<script src="https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.ui.js"></script>
+
+		<link href="css/leaf.css" rel="stylesheet" type="text/css" />
+
 		<title>Photography by Nam Pham</title>
 		<meta charset="UTF-8">
 		<meta name="description" content="Nam Pham Photography - Home Page">
@@ -21,6 +30,41 @@
 	</head>
 
 	<body>
+		<!--
+
+			WORK-IN-PROGRESS
+
+		<div id="cover">
+			<img src="http://wallpup.com/wp-content/uploads/2013/04/Cool-Background-Green-Leaf.jpg" alt="bg-leaf" />
+			<div id="logo-bg"><h1>Nam Pham</h1></div>
+		</div>
+
+		-->
+
+		<ul class="nav nav-pills">
+			<li role="presentation" id="title-logo">Nam Pham</li>
+			<li role="presentation" class="active"><a href="#" class="brackets"><span class="glyphicon glyphicon-home"> HOME</span></a></li>
+			<li role="presentation"><a href="#" class="brackets"><span class="glyphicon glyphicon-user"> ABOUT</span></a></li>
+			<li role="presentation"><a href="#" class="brackets"><span class="glyphicon glyphicon-picture"> PHOTOS</span></a></li>
+			<li role="presentation"><a href="#" class="brackets"><span class="glyphicon glyphicon-envelope"> CONTACT</span></a></li>
+		</ul>
+
+		<div class="container">
+		    <!-- Jssor Slider Begin -->
+		    <div id="slider1_container" style="display: none; position: relative; margin: 0 auto; width: 980px; height: 380px; overflow: hidden;">
+			...
+		    </div>
+		    <!-- Jssor Slider End -->
+		</div>
+	
+
+		<div class="container">
+		  <br>
+		
+
+		  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+		    <!-- Indicators -->
+
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		  <!-- Carousel items -->
 		    <ol class="carousel-indicators">
