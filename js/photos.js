@@ -2,7 +2,7 @@
 
 var data;
 var photoArray = {};
-
+var images = [];
 
 var abelia = ['IMG_0006.JPG', 'IMG_6682.JPG', 'IMG_8041.JPG', 'IMG_8042.JPG', 'IMG_8565.JPG'];
 var abeliophyllum = ['IMG_8401.JPG', 'IMG_9908.JPG', 'IMG_9911.JPG'];
@@ -41,9 +41,9 @@ function displayPhotos() {
 	for (var i = 0; i < keys.length; i++) {
 		var genus = keys[i];
 		$("#photo-container").append('<div class="genus-container"</div>');
-		$("#genus-container").append('<span class="genus">' + genus + '</span>');
+		$(".genus-container:last").append('<span class="genus">' + genus + '</span>');
 		for (var j = 0; j < photoArray[genus].length; j++) {
-			$(".genus-container").append('<img src="img/' + genus + '/' + photoArray[genus][j] + '" />');
+			$(".genus-container:last").append('<img src="img/' + genus + '/' + photoArray[genus][j] + '" />');
 		}
 	}
 }
@@ -571,11 +571,14 @@ function parseFileToJSON() {
 		var line = textFile[i];
 		var tokens = line.split("/");
 		var genus = tokens[1];
-		var image = tokens[2];
+		var imageURL = tokens[2];
+		var image = new Image();
+		image.src = imageURL;
+		images.push(image);
 		if (!photoArray[genus]) {
 			photoArray[genus] = [];
 		}
-		photoArray[genus].push(image);
+		photoArray[genus].push(imageURL);
 	}
 }
 
