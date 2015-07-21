@@ -8,13 +8,6 @@ body {
   width: calc(100% - 275px);
 }
 
-#myCarousel {
-	width: 80%;
-	height: 100%;
-	position: relative;
-	left: 275px;
-}
-
 h2 {
 	position: absolute; 
 	top: 20%;
@@ -30,45 +23,6 @@ h2 span {
 	/*background-color: rgba(0, 0, 0, 0.3);*/
 }
 
-blockquote {
-	border:none;
-	font-family: 'Raleway';
-	max-width: 600px; 
-	margin: 0 auto;
-	padding-left: 0.4em; 
-	position: absolute; 
-	top: 60%;
-	left: 0;
-	color: white;
-	background-color: black;
-}
-
-blockquote h3 {
-	font-size:48px;
-}
-
-blockquote h3:before { 
-	content: "\201C";
-	font-weight: bold;
-	font-size:100px;
-	color: lightblue;
-	position: absolute; 
-	top: -0.2em;
-	left: -0.5em; 
-	font-family: 'Georgia'; 
-} 
-
-blockquote h3:after { 
-	content: "\201D";
-	font-weight: bold;
-	font-size:100px;
-	color:lightblue;
-	position: absolute; 
-	bottom: -0.6em;
-	right: 0; 
-	font-family: 'Georgia'; 
-}
-
 div.container.fill {
 	width: 100%;
 	height: 100%;
@@ -78,12 +32,39 @@ div.container.fill {
 }
 
 #myCarousel {
-	width: 80%;
+	width: 100%;
 	height: 100%;
+	position: relative;
+	left: 275px;
 	padding: 0;
 	margin: 0;
 	background-color: black;
 	z-index: -1;
+}
+
+#carousel-dot-overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;	
+	background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
+	opacity: 0.35;
+	z-index: 1;
+}
+
+.carousel-control {
+    position: fixed;
+    z-index: 2;
+}
+
+.carousel-indicators {
+	left: 0;
+ 	width: 100%;
+ 	margin: 0 auto;
+	z-index: 2;
+}
+.carousel-control.left{
+    left: 275px;
+    z-index: 2;
 }
 
 .carousel-inner {
@@ -95,12 +76,17 @@ div.container.fill {
 }
 
 .carousel-inner .item {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 	padding: 0;
 	margin: 0;
 	z-index: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 .carousel-inner .item img {
 	width: 100%;
 	height: 100%;
@@ -109,54 +95,13 @@ div.container.fill {
 	z-index: 0;
 }
 
-.carousel-indicators {
-	left: 0;
- 	width: 80%;
- 	margin: 0 auto;
-	z-index: 2;
-}
-
-.carousel-control {
-	z-index: 2;
-}
-
-/* Stack Overflow carousel */
-#myCarousel {
-    width: 100%;
-    left: 275px;
-}
-
-#carousel-dot-overlay {
-	position: absolute;
-	height: 100%;
-	width: 80%;	
-	background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
-	opacity: 0.35;
-	z-index: 1;
-}
-
-.carousel-control {
-    position: fixed;
-    z-index: 2;
-}
-.carousel-control.left{
-    left: 275px;
-    z-index: 2;
-}
-.carousel-inner .item {
-    width: 100%;
-    height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 .carousel-caption {
 	position: absolute;
 	left: 0;
 	right: 0;
-	width: 80%;
+	width: 75%;
 	z-index: 50;
+	margin: 0 auto;
 }
 .feat1 {
     background: url(../img/Acca/IMG_7147_2.JPG) no-repeat center center; 
@@ -174,5 +119,5 @@ div.container.fill {
     background: url(../img/Adromischus/IMG_3703.JPG) no-repeat center center; 
 }
 .feat6 {
-    background: url(../img/Annona/IMG_0686_2.JPG) no-repeat center center fixed; 
+    background: url(../img/Annona/IMG_0686_2.JPG) no-repeat center center; 
 }
