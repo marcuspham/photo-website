@@ -2,6 +2,7 @@
 <html>
 	<!-- Leaf transition -->
 	<head>
+
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<!-- Velocity.js -->
   		<script src="https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.min.js"></script>
@@ -9,26 +10,36 @@
   		<script src="https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.ui.js"></script>
 
 		<link href="css/leaf.css" rel="stylesheet" type="text/css" />
+
 		<title>Photography by Nam Pham</title>
 		<meta charset="UTF-8">
-		<meta name="description" content="Contact information for Nam Pham">
+		<meta name="description" content="Nam Pham Photography - Home Page">
 		<meta name="keywords" content="HTML, CSS, JavaScript">
-		<meta name="author" content="Christy Pham, Marcus Pham, Matthew Pham, and Tisha Trongtham">
+		<meta name="author" content="Tisha Trongtham">
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  		<script src="js/leaf.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link rel="shortcut icon" href="">
+		<link href="css/leaf.css" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/index.css">
+		<link rel="shortcut icon" href="">
+
 	</head>
 
 	<body>
+		<!--
+
+			WORK-IN-PROGRESS
 
 		<div id="cover">
 			<img src="http://wallpup.com/wp-content/uploads/2013/04/Cool-Background-Green-Leaf.jpg" alt="bg-leaf" />
 			<div id="logo-bg"><h1>Nam Pham</h1></div>
 		</div>
+
+		-->
 
 		<ul class="nav nav-pills">
 			<li role="presentation" id="title-logo">Nam Pham</li>
@@ -53,57 +64,91 @@
 
 		  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 		    <!-- Indicators -->
+
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  <!-- Carousel items -->
 		    <ol class="carousel-indicators">
-		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		      <li data-target="#myCarousel" data-slide-to="1"></li>
-		      <li data-target="#myCarousel" data-slide-to="2"></li>
-		      <li data-target="#myCarousel" data-slide-to="3"></li>
+		      	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		      	<li data-target="#myCarousel" data-slide-to="1"></li>
+		      	<li data-target="#myCarousel" data-slide-to="2"></li>
+		      	<li data-target="#myCarousel" data-slide-to="3"></li>
+		      	<li data-target="#myCarousel" data-slide-to="4"></li>
+				<li data-target="#myCarousel" data-slide-to="5"></li>
 		    </ol>
-
-		    <!-- Wrapper for slides -->
-		    <div class="carousel-inner" role="listbox">
-		      <div class="item active">
-			<img src="https://pbs.twimg.com/media/CJMmqfoUMAASwqV.jpg:large" alt="Chania" width="100%" height="100%">
-		      </div>
-
-		      <div class="item">
-			<img src="https://pbs.twimg.com/media/CJN4ieoUMAAzO6J.jpg:large" alt="Chania" width="100%" height="100%">
-		      </div>
-		    
-		      <div class="item">
-			<img src="https://pbs.twimg.com/media/CJO9lsVUsAAKDR-.jpg:large" alt="Flower" width="100%" height="100%">
-		      </div>
-
-		      <div class="item">
-			<img src="https://pbs.twimg.com/media/CGkkrCoUAAA-r0Z.jpg:large" alt="Flower" width="100%" height="100%">
-		      </div>
+		  <div id="carousel-dot-overlay"></div>
+		  <div class="carousel-inner" role="listbox">
+		     <div class="item active feat1">
+		        <div class="carousel-caption">
+		           <h4>Acca</h4>
+		           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		        </div>
+		     </div>
+		     <div class="item feat2 flip">
+		        <div class="carousel-caption">
+		            <h4>Abelmoschus</h4>
+		            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		         </div>
+		     </div>
+		     <div class="item feat3">
+		        <div class="carousel-caption">
+		           <h4>Aechmea</h4>
+		           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		        </div>
 		    </div>
-
-		    <!-- Left and right controls -->
-		    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-		      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		      <span class="sr-only">Previous</span>
-		    </a>
-		    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-		      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		      <span class="sr-only">Next</span>
-		    </a>
-
-			<blockquote><h3>Strange obsession with botanical photography...</h3></blockquote>
+		    <div class="item feat4">
+		        <div class="carousel-caption">
+		           <h4>Acer</h4>
+		           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		        </div>
+		     </div>
+		     <div class="item feat5">
+		        <div class="carousel-caption">
+		            <h4>Adromischus</h4>
+		            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		         </div>
+		     </div>
+		     <div class="item feat6">
+		        <div class="carousel-caption">
+		           <h4>Annona</h4>
+		           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+		        </div>
+		    </div>
 		  </div>
+		  <!-- Carousel nav -->
+		    	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		      		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		      		<span class="sr-only">Previous</span>
+		    	</a>
+		    	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		      		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		      		<span class="sr-only">Next</span>
+		    	</a>
 		</div>
 
+		<div class="sidebar"> 
+			<div id="sidebar-overlay"></div>
+			<div id="dot-overlay"></div>
+			<a href="index.html">
+				<div id="title">
+					<h1>Nam Pham</h1>
+				</div>
+			</a>	
+			<div id="menu-wrapper">
+				<ul id="menu" class="nav nav-pills nav-stacked">
+					<li role="presentation" class="active"><a href="index.html" class="brackets">HOME</a></li>
+					<li role="presentation"><a href="about.html" class="brackets">ABOUT</a></li>
+					<li role="presentation"><a href="photos.html" class="brackets">PHOTOS</a></li>
+					<li role="presentation"><a href="contact.html" class="brackets">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- <h2><span>Strange obsession <br/> with botanical photography<span></h2> -->
 		<!--
 		<div id="container">
-<<<<<<< HEAD
-			<img class="leaf" src="http://wallpup.com/wp-content/uploads/2013/04/Cool-Background-Green-Leaf.jpg" />
-		</div>
-=======
 			<div id="leaf1" class="leaf"></div>
 			<div id="leaf2" class="leaf"></div>
 		</div> -->
-
->>>>>>> 095c9502666b618b0788749c711f047b6367ec04
 
 	</body>
 
