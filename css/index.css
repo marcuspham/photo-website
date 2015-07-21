@@ -1,4 +1,36 @@
+<<<<<<< HEAD
 body, body.active {
+=======
+@import url(https://fonts.googleapis.com/css?family=Megrim);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+#cover {
+
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#cover #logo-bg {
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#cover h1 {
+	color: white;
+}
+
+#cover h1:hover {
+	color: red;
+	cursor: pointer;
+}
+
+body {
+>>>>>>> 22c1f492d9f9dbc4406499d43cbf4f3d5e833517
   position: fixed;
 }
 
