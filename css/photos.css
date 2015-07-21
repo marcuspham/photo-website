@@ -9,12 +9,20 @@ h1 {
 img {
 	max-width: 100px;
 	max-height: 100px;
+	display: none;
+}
+
+img:hover {
 	display: inline-block;
+}
+
+img:first-of-type {
+	display: inline-block;
+
 }
 
 .genus-container {
 	display: inline-block;
-	max-height: ;
 	position: relative;
 }
 
