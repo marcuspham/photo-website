@@ -25,6 +25,7 @@ body {
 	font-size: 25px;
 	font-family: 'Raleway';
 	color: white;
+	padding-bottom: 20px;
 }
 
 #main p {
@@ -35,8 +36,11 @@ body {
   	width: 75%;
   	margin: 0 auto;
 }
+.hex-layers {
+	width: 100%;
+}
 .hex {
-	margin-left: 30px;
+	margin: 10%;
 }
 .hex:before {
     content: " ";
@@ -61,7 +65,7 @@ body {
     width: 0;
     position: absolute;
     bottom: -90px;
-    border-top: 90px solid #8AA37B	;
+    border-top: 90px solid #8AA37B;
     border-left: 156px solid transparent;
     border-right: 156px solid transparent;
 }
