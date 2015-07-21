@@ -3,8 +3,9 @@ body {
 }
 
 img {
-	max-width: 100px;
-	max-height: 100px;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
 	display: none;
 }
 
@@ -24,6 +25,8 @@ img:first-of-type {
 
 .genus {
 	position: absolute;
+	left: 0;
+	top: 0;
 	text-align: center;
 	background-color: rgba(255, 255, 255, 0.8);
 	width: 100%;
