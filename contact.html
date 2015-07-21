@@ -9,6 +9,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 		<script src="js/contact.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="shortcut icon" href="">
@@ -17,9 +18,12 @@
 	</head>
 
 	<body> 
+		<!-- Copy sidebar/menu into all pages -->
+		<span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span>
+
 		<div class="sidebar"> 
 			<div id="sidebar-overlay"></div>
-			<div id="dot-overlay"></div>
+			<div id="sidebar-dot-overlay"></div>
 			<a href="index.html">
 				<div id="title">
 					<h1>Nam Pham</h1>
@@ -27,65 +31,68 @@
 			</a>	
 			<div id="menu-wrapper">
 				<ul id="menu" class="nav nav-pills nav-stacked">
-					<li role="presentation"><a href="index.html" class="brackets">HOME</a></li>
-					<li role="presentation"><a href="about.html" class="brackets">ABOUT</a></li>
-					<li role="presentation"><a href="photos.html" class="brackets">PHOTOS</a></li>
-					<li role="presentation" class="active"><a href="contact.html" class="brackets">CONTACT</a></li>
+					<li role="presentation" class="active"><a href="index.html">HOME</a></li>
+					<li role="presentation"><a href="about.html">ABOUT</a></li>
+					<li role="presentation"><a href="photos.html">PHOTOS</a></li>
+					<li role="presentation"><a href="contact.html">CONTACT</a></li>
 				</ul>
 			</div>
 		</div>
+		<!-- End of sidebar/menu -->
 
 		<div id="main">
 			<div id="main-overlay"></div>
 			<div id="getInTouch" style="overflow:auto">
-				<p> Get in touch </p>
-				<div id="phone-wrapper" class="col-sm-2 col-sm-offset-3">
-					<h1> PHONE </h1>
-					<div id="icon-wrapper">
-						<a href="tel:720-251-9282"><span id="phone" class="glyphicon glyphicon-earphone img-circle"></span></a> <br/>
-						<text>720-251-9282</text>
+				<h1> Get in touch </h1>
+				<div id="media-wrapper">
+					<div id="phone-wrapper" class="col-sm-4">
+						<h2> PHONE </h2>
+						<div id="icon-wrapper">
+							<a href="tel:720-251-9282"><span id="phone" class="glyphicon glyphicon-earphone img-circle"></span></a> <br/>
+							<text>720-251-9282</text>
+						</div>
 					</div>
-				</div>
-				<div id="email-wrapper" class="col-sm-2">
-					<h1> EMAIL </h1>
-					<div id="icon-wrapper">
-						<a href="mailto:phamplatinum@gmail.com"><span id="email" class="glyphicon glyphicon-envelope img-circle"></span></a> <br/> 
-						<text> phamplatinum <br/> @gmail.com </text>
+					<div id="email-wrapper" class="col-sm-4">
+						<h2> EMAIL </h2>
+						<div id="icon-wrapper">
+							<a href="mailto:phamplatinum@gmail.com"><span id="email" class="glyphicon glyphicon-envelope img-circle"></span></a> <br/> 
+							<text> phamplatinum <br/> @gmail.com </text>
+						</div>
 					</div>
-				</div>
-				<div id="social-wrapper" class="col-sm-2">
-					<h1> TWITTER </h1>
-					<div id="icon-wrapper">
-						<a href="https://twitter.com/intent/follow?screen_name=pham720&tw_p=followbutton"><img id="social" class="img-circle" src="http://app-assets3.sportngin.com/images/twitter-bird-dark-bgs.png?1436797972"/></a> <br/>
-						<text> @pham720 </text>
+					<div id="social-wrapper" class="col-sm-4">
+						<h2> TWITTER </h2>
+						<div id="icon-wrapper">
+							<a href="https://twitter.com/intent/follow?screen_name=pham720&tw_p=followbutton"><img id="social" class="img-circle" src="http://app-assets3.sportngin.com/images/twitter-bird-dark-bgs.png?1436797972"/></a> <br/>
+							<text> @pham720 </text>
+						</div>
 					</div>
 				</div>
 			</div> 
 
 			<div id="leaveNote">
-				<p> Leave a note </p>
+				<h1> Leave a note </h1>
 				  <div ng-app="myApp" ng-controller="myCtrl">
 				  	<form class="form-horizontal" role="form" name="myForm" novalidate>
 				    	<div class="form-group">
-				    		<div class="col-xs-6 col-centered">
+				    		<div class="col-xs-12 col-centered">
 						       	<input name="name" class="form-control" ng-required="true" ng-model="user.name" placeholder="{{(myForm.name.$invalid && myForm.name.$touched) ? '* Your name' : 'Your name'}}" required> </input> 	 
 						    </div>
 				    	</div>
 
 				    	<div class="form-group">
-				    		<div class="col-xs-6 col-centered">
+				    		<div class="col-xs-12 col-centered">
 						       	<input name="email" class="form-control" ng-required="true" ng-model="user.email" placeholder="{{(myForm.email.$invalid && myForm.email.$touched) ? '* Your email' : 'Your email'}}" required> </input>
 						    </div>
 				    	</div> 
 
 				    	<div class="form-group">
-				    		<div class="col-xs-6 col-centered">
+				    		<div class="col-xs-12 col-centered">
 						       	<input name="phone" class="form-control" ng-required="true" ng-model="user.phone" placeholder="{{(myForm.phone.$invalid && myForm.phone.$touched) ? '* Your phone' : 'Your phone'}}" required> </input>
 						    </div>
 				    	</div>
 
 				    	<div class="form-group">
-				    		<div class="col-xs-6 col-centered">
+				    		<div class="col-xs-12 col-centered">
 						       	<textarea rows="5" class="form-control" placeholder="Your message"></textarea>
 						    </div>
 				    	</div>    

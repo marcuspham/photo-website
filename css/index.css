@@ -1,26 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Megrim);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(http://fonts.googleapis.com/css?family=Lato);
-
-body {
+body, body.active {
   position: fixed;
-  height: 100%;
-  width: calc(100% - 275px);
-}
-
-h2 {
-	position: absolute; 
-	top: 20%;
-	left: 0;
-	width: 100%;
-}
-
-h2 span {
-	color: white;
-	font: 150% 'Raleway';
-	font-weight: bold;
-	/*background-color: black; /* fallback */
-	/*background-color: rgba(0, 0, 0, 0.3);*/
 }
 
 div.container.fill {
@@ -35,7 +14,6 @@ div.container.fill {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	left: 275px;
 	padding: 0;
 	margin: 0;
 	background-color: black;
@@ -64,6 +42,11 @@ div.container.fill {
 }
 .carousel-control.left{
     left: 275px;
+    z-index: 2;
+}
+
+.carousel-control.left.active{
+    left: 0;
     z-index: 2;
 }
 
