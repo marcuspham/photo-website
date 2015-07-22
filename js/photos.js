@@ -8,7 +8,7 @@ var images = [];
 window.onload = function() {
 	parseFileToJSON();
 	displayPhotos();
-	// toggleGenus();
+	toggleGenus();
 	// animatePhotos();
 };
 
@@ -47,19 +47,31 @@ function displayPhotos() {
 
 function toggleGenus() {
 	$(".genus-container").on("click", function() {
-		if ($(this).children("img:last-of-type").css("display") == 'none') {
+		if ($("#description").css("display") == 'none') {
 			$("#description").show();
-			$("#description").prepend('<hr width="50%"></hr>');
+			$("#description").append('<hr width="50%"></hr>');
 			$(this).clone().prependTo($("#description"));
-			$(".genus-container:first-of-type").children("img").css("display", "inline-block");
+			var genusBlock = $(".genus-container:first-of-type");
+			genusBlock.children("img").css("display", "inline-block");
+			genusBlock.remove("span");
 			var genus = $(this).attr('name');
-			$("#photo-container").prepend('<h2>' + genus + '</h2>');
-			$(this).children("img").css("display", "inline-block");
-		} else {
-			$(this).children("img").css("display", "none");
-			$(this).children("img:first-of-type").css("display", "inline-block");
+			$("#description").prepend('<h2>' + genus + '</h2>');
+		} else if ($(this) != genusBlock) {
+			var genusBlock = $(".genus-container:first-of-type");
+			var copy = $(this).clone();
+			var genus = copy.attr('name');
+			genusBlock.replaceWith(copy);
+			copy.children("img").css("display", "inline-block");
+			copy.remove("span");
+			$("#description h2").replaceWith('<h2>' + genus + '</h2>');
 		}
 	});
+	$("#remove").on("click", function() {
+		$("#description").contents().filter(function () {
+    		return this.id != "remove";
+		}).remove();
+		$("#description").hide();
+	})
 }
 
 // Creates Psuedo-JSON Object
