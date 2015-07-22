@@ -1,6 +1,6 @@
 "use strict";
 
-var MAX_GENUS = 10;
+var MAX_GENUS = 12;
 
 var photoArray = {};
 var images = [];
@@ -23,23 +23,20 @@ function displayPhotos() {
 		for (var j = 0; j < photoArray[genus].length; j++) {
 			var img = $(document.createElement('img'));
 			img.attr('src', 'img/' + genus + '/' + photoArray[genus][j]);
-			img.attr('name', genus);
-
+			// img.attr('name', genus);
+			$(".genus-container:last-of-type").append(img);
 			img.click(function() {
+				alert();
 				var modalImage = $(this).clone();
 				modalImage.addClass('modal-img');
 				var modalBody = $('.modal-body');
 				$('.modal-title').text($(this).attr('name'));
 				modalBody.text('');
 				modalBody.append(modalImage);
-
 				var modal = $('#photo-modal');
-				$('.close-modal').click(function() { modal.hide() });
 				modal.show();
+				$('.close-modal').click(function() { modal.hide() });
 			});
-
-			$(".genus-container:last-of-type").append(img);
-
 		}
 	}
 
@@ -127,7 +124,7 @@ function parseFileToJSON() {
 	"img/Acanthostachys/IMG_0832.JPG",
 	"img/Acanthostachys/IMG_1418.JPG",
 	"img/Acanthostachys/IMG_1754.JPG",
-	"img/Acanthus/IMG_3148.jpg",
+	"img/Acanthus/IMG_3148.jpg" /*,
 	"img/Acanthus/IMG_3151.jpg",
 	"img/Acanthus/IMG_6783.JPG",
 	"img/Acca/IMG_1092_2.JPG",
@@ -145,7 +142,7 @@ function parseFileToJSON() {
 	"img/Acer/IMG_8201.JPG",
 	"img/Acer/IMG_9644.JPG",
 	"img/Acer/IMG_9649.JPG",
-	"img/Acer/IMG_9669.JPG"/*,
+	"img/Acer/IMG_9669.JPG",
 	"img/Achillea/IMG_0480.JPG",
 	"img/Achillea/IMG_2021.JPG",
 	"img/Achillea/IMG_2026.JPG",
@@ -571,7 +568,7 @@ function parseFileToJSON() {
 	"img/Azolla/IMG_3196.JPG",
 	"img/Azolla/IMG_8593.JPG",
 	"img/Azorella/IMG_3418.JPG",
-	"img/Azorella/IMG_3420.JPG"*/];
+	"img/Azorella/IMG_3420.JPG" */];
 	for (var i = 0; i < textFile.length; i++) {
 		var line = textFile[i];
 		var tokens = line.split("/");
