@@ -1,3 +1,6 @@
+//Loads and fades in background image
+
+//Changes hexagon text
 $(document).ready(function(){
 	$("#hex1").hover(function(){
 	    $("#history").text("Seven years ago, I picked up a camera and took a photo of a nearby flower in bloom. I haven't put it down since.");
