@@ -29,7 +29,7 @@ body.active { /* Adjust body according to sidebar */
   left: 0;
 }
 
-#main-overlay {
+#main-overlay, #frame {
 	position: fixed;
 	left: 275px;
 	width: calc(100% - 275px);
@@ -37,13 +37,21 @@ body.active { /* Adjust body according to sidebar */
 	top: 0;
 	padding: 0;
 	margin: 0;
+}
+
+#main-overlay {
 	background-color: rgba(0, 0, 0, 0.7);
 	z-index: -1;
 }
 
-#main-overlay.active { /* Adjust overlay according to sidebar */
+#main-overlay.active, #frame.active { /* Adjust overlay and frame according to sidebar */
 	left: 0px;
 	width: 100%;
+}
+
+#frame {
+	border: 2px ridge rgba(295, 295, 295, 0.5);
+	z-index: 3;
 }
 
 /* Button for expanding and collapsing sidebar */
@@ -54,7 +62,7 @@ body.active { /* Adjust body according to sidebar */
 	left: 3px;
 	font-size: 2em;
 	color: white;
-	z-index: 3;
+	z-index: 4;
 }
 
 #hamburger:hover, #hamburger.active {
