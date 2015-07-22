@@ -57,6 +57,10 @@ div.container.fill, #myCarousel, #carousel-dot-overlay,
 	width: 75%;
 }
 
+.carousel-caption p {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 .feat1 {
     background: url(../img/Acca/IMG_7147_2.JPG); 
 }
