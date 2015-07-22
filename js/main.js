@@ -1,39 +1,46 @@
 // Collapse or reveal the sidebar when the hamburger is clicked.
 $(document).ready(function(e) {   
-  $('#hamburger').click(function() {
-
-	console.log("You pushed the burger");
-    
-    var sidebar = $('.sidebar');
-    var showing = (sidebar.css('display') != 'none');
-    var translateX = (showing) ? "-=275" : "+=275";
-    var resizeWidth = (showing) ? "+=275" : "-=275";
-    var dur = 400;
-
-    // Animate elements
-
-    resize($('#frame'), resizeWidth, translateX, dur);
-    resize($('body'), resizeWidth, translateX, dur);
-    resize($('#main-overlay'), resizeWidth, translateX, dur);
-    slide($('#copyright'), translateX, dur);
-    slide($('#title'), translateX, dur);
-    slide($('.carousel-control.left'), translateX, dur);
-
-    // Make sure there's room for sidebar animation before/after
-    if (showing) {
-      sidebar.velocity({ left: translateX }, {
-        duration: dur,
-        complete: function() { toggleClasses(); }
-      });
-    } else {
-      sidebar.velocity({ left: translateX }, {
-        duration: dur,
-        begin: function() { toggleClasses(); }
-      });
-    }
-
-  });
+  $('#hamburger').on('click', animateSidebar);
 });
+
+function animateSidebar() {
+  // Disable hamburger while animating
+  $(this).off('click');
+
+  var sidebar = $('.sidebar');
+  var showing = (sidebar.css('display') != 'none');
+  var translateX = (showing) ? "-=275" : "+=275";
+  var resizeWidth = (showing) ? "+=275" : "-=275";
+  var dur = 400;
+
+  // Animate elements
+
+  resize($('#frame'), resizeWidth, translateX, dur);
+  resize($('body'), resizeWidth, translateX, dur);
+  resize($('#main-overlay'), resizeWidth, translateX, dur);
+  slide($('#copyright'), translateX, dur);
+  slide($('#title'), translateX, dur);
+  slide($('.carousel-control.left'), translateX, dur);
+
+  // Make sure there's room for sidebar animation before/after
+  if (showing) {
+    sidebar.velocity({ left: translateX }, {
+      duration: dur,
+      complete: function() {
+        toggleClasses();
+        $('#hamburger').on('click', animateSidebar);
+      }
+    });
+  } else {
+    sidebar.velocity({ left: translateX }, {
+      duration: dur,
+      begin: function() { toggleClasses(); },
+      complete: function() {
+        $('#hamburger').on('click', animateSidebar);
+      }
+    });
+  }
+}
 
 // Resizes a jQuery Object with given d(width),
 // d(x), and duration.
