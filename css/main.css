@@ -76,7 +76,7 @@ body.active { /* Adjust body according to sidebar */
 	background: url(../img/Aphelandra/IMG_2184b.JPG) no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	border-right: solid 1px white;
+	border-right: solid 1px darkgrey;
 	z-index: 0;
 	-moz-box-shadow: inset -5px -5px 15px #888;
 	-webkit-box-shadow: inset -5px -5px 15px #888;
@@ -177,4 +177,16 @@ body.active { /* Adjust body according to sidebar */
 .nav-pills>li>a:hover::before {
   	bottom: auto;
   	top: 0;
+}
+
+#copyright {
+	position: fixed;
+  	bottom: 0px;
+  	left: 0px;
+  	width: 275px;
+  	margin: 10px;
+  	color: rgba(295, 295, 295, 0.5);
+  	font-family: 'Quicksand';
+  	z-index: 4;
+  	font-size: 11px;
 }
