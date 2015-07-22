@@ -35,8 +35,10 @@ function displayPhotos() {
 		var genus = keys[i];
 		$("#photo-container").append('<div class="genus-container" name="' + genus + '"</div>');
 		$(".genus-container:last-of-type").append('<span class="genus">' + genus + '</span>');
+		
+		/*
 		// Adjust text in spans to fit divs
-		/* var adjustTextSize = function() {
+		var adjustTextSize = function() {
 			var objSpan = $('.genus:last-of-type');  
 			var intDivWidth = $('.genus-container:last-of-type').width();  
 			var intResultSize;  
@@ -49,7 +51,9 @@ function displayPhotos() {
 			}
 			objSpan.css('font-size', intResultSize);
 		}
-		adjustTextSize(); */
+		adjustTextSize();
+		*/
+		
 		// Append the images to the div
 		for (var j = 0; j < photoArray[genus].length; j++) {
 			var img = $(document.createElement('img'));
@@ -62,7 +66,7 @@ function displayPhotos() {
 				modalImage.addClass('modal-img');
 				var modalBody = $('.modal-body');
 				$('.modal-title').text($(this).parent().attr('name'));
-
+				// The list of fun facts
 				var funFacts = [
 					"Fruit is a botanical term and Vegetable is a culinary term, so certain vegetation such as tomatoes, green beans, eggplants, and cucumbers could be called either fruits or vegetables.",
 					"A herb is specifically from the leaf of a plant, and a spice is from the seed, berry, stem, bark, root or bulb.",

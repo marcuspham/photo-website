@@ -1,3 +1,10 @@
+/*
+ * Nam Pham Photography Website
+ * Main JS file
+ *
+ * Handles sidebar collapse/animation
+ */
+
 // Collapse or reveal the sidebar when the hamburger is clicked.
 $(document).ready(function(e) {   
   $('#hamburger').on('click', animateSidebar);

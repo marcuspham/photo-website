@@ -1,3 +1,9 @@
+/*
+ * Nam Pham Photography Website
+ * Contact Page JS
+ */
+
+// Set up and sync app and controller 
 var myApp = angular.module('myApp', [])
 myApp.controller('myCtrl', function($scope){
   $scope.master = {}
