@@ -1,6 +1,4 @@
-//Loads and fades in background image
-
-//Changes hexagon text
+//Changes text inside hexagons when mouse hovers over them
 $(document).ready(function(){
 	$("#hex1").hover(function(){
 	    $("#history").text("Seven years ago, I picked up a camera and took a photo of a nearby flower in bloom. I haven't put it down since.");
@@ -18,7 +16,7 @@ $(document).ready(function(){
 	    $("#travels").text("TRAVELS");
 	});
 	$("#hex4").hover(function(){
-	    $("#why").text("Every plant has a story.");
+	    $("#why").text("Every plant has a story. Now I want to share it with you.");
 	}, function() {
 	    $("#why").text("WHY");
 	});
