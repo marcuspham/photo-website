@@ -43,7 +43,7 @@ body.active { /* Adjust body according to sidebar */
 	border-bottom: none;
 }
 
-#main-overlay.active { /* Adjust overlay and frame according to sidebar */
+#main-overlay.active { /* Adjust overlay according to sidebar */
 	left: 0px;
 	width: 100%;
 }

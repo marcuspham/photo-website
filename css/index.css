@@ -10,6 +10,19 @@ div.container.fill, #myCarousel, #carousel-dot-overlay,
 	margin: 0;
 }
 
+#frame {
+	position: fixed;
+	left: 275px;
+	width: calc(100% - 275px);
+	height: 100%;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+	border: 2px ridge rgba(295, 295, 295, 0.5);
+	border-bottom: none;
+}
+
 #myCarousel {
 	position: relative;
 	z-index: -1;
@@ -64,18 +77,23 @@ div.container.fill, #myCarousel, #carousel-dot-overlay,
 .feat1 {
     background: url(../img/Acca/IMG_7147_2.JPG); 
 }
+
 .feat2 {
     background: url(../img/Abelmoschus/IMG_7831.JPG); 
 }
+
 .feat3 {
     background: url(../img/Aechmea/IMG_4105.JPG); 
 }
+
 .feat4 {
     background: url(../img/Acer/IMG_8201.JPG); 
 }
+
 .feat5 {
     background: url(../img/Adromischus/IMG_3703.JPG); 
 }
+
 .feat6 {
     background: url(../img/Annona/IMG_0686_2.JPG); 
 }
