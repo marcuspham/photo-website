@@ -4,7 +4,6 @@ $(document).ready(function(e) {
     $('body').toggleClass('active');
     $('.carousel-control.left').toggleClass('active');
     $('#main-overlay').toggleClass('active');
-    $('#frame').toggleClass('active');
     $('#hamburger').toggleClass('active');
   });
 });
@@ -15,14 +14,12 @@ $(window).resize(function() {
     $('body').addClass('active');
     $('.carousel-control.left').addClass('active');
     $('#main-overlay').addClass('active');
-    $('#frame').addClass('active');
     $('#hamburger').addClass('active');
   } else {
     $('.sidebar').show();
     $('body').removeClass('active');
     $('.carousel-control.left').removeClass('active');
     $('#main-overlay').removeClass('active');
-    $('#frame').removeClass('active');
     $('#hamburger').removeClass('active');
   }
 });
