@@ -1,3 +1,19 @@
+/*
+ * Nam Pham's Photo Garden page
+ * Development: Matthew Pham, Marcus Pham
+ * Updated July 22, 2015
+ *
+ * Displays gallery of plant photos by genus.
+ * Allows user to click on genus to see more plants,
+ * as well as individual plants.
+ *
+ * Todo: Upload image files to server
+ */
+
+
+// Module pattern to encapsulate vars
+(function() {
+
 "use strict";
 
 var MAX_GENUS = 12; // Constant number of genuses to be displayed
@@ -9,7 +25,6 @@ window.onload = function() {
 	parseFileToJSON();
 	displayPhotos();
 	toggleGenus();
-	// animatePhotos();
 };
 
 // Loops through genuses and images to sort images into respective genus containers
@@ -609,7 +624,4 @@ function parseFileToJSON() {
 	}
 }
 
-// Animates the photos
-function animatePhotos() {
-
-}
+}) ();

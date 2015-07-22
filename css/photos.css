@@ -29,6 +29,23 @@ img:first-of-type {
 
 #description {
 	display: none;
+	margin-bottom: 20px;
+}
+
+#description img {
+	width: 200px;
+	height: 200px;
+	opacity: 0.5;
+	transition: opacity 0.3s ease, transform 0.3s;
+	border: 20px solid white;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.8);
+	margin: 30px;
+	cursor: pointer;
+}
+
+#description img:hover {
+	opacity: 1.0;
+	transform: rotate(10deg);
 }
 
 button {
@@ -53,24 +70,23 @@ button {
 	position: relative;
 }
 
-.genus-container:hover {
-	cursor: pointer;
-}
-
 .genus {
 	position: absolute;
 	left: 0;
 	top: 0;
 	margin: 0;
 	text-align: center;
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.7);
 	width: 100%;
 	height: 100%;
 	opacity: 0;
+	transition: opacity 0.3s ease, font-size 0.2s;
+	cursor: pointer;
 }
 
 .genus:hover {
 	opacity: 1;
+	font-size: 11pt;
 }
 
 .modal {

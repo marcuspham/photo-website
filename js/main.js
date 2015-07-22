@@ -35,6 +35,7 @@ $(document).ready(function(e) {
 
 // Resizes a jQuery Object with given d(width),
 // d(x), and duration.
+// The width automagically expands towards the left.
 function resize(obj, dw, dx, dur) {
   obj.velocity({ 
     width: dw,
