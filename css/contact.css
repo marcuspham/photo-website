@@ -24,9 +24,6 @@ body {
     -moz-animation-duration:1s;
     animation-duration:1s;
 
-    -webkit-animation-delay: 1.5s;
-    -moz-animation-delay: 1.5s;
-    animation-delay: 1.5s;
 }
 #getInTouch, #leaveNote {
 	margin: 20px;
