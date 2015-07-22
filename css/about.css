@@ -38,14 +38,15 @@ p {
 }
 
 .hex-layers {
-    width: 100%;
+    width: 80%;
     height: 0; 
-    padding: 5%;
+    padding: 3%;
+    margin: auto;
 }
 
 .hex:before {
     z-index: -1;
-    content: " ";
+    content: "";
     width: 0; height: 0;
     border-bottom: 80px solid #7A378B;
     border-left: 130px solid transparent;
@@ -75,5 +76,41 @@ p {
     border-right: 130px solid transparent;
 }
 
-/*Change hexagon colors, add images to equipment and travels. 
-Make bootstrap responsive. Stack. Fade in and fade out. */
+#hex2 {
+    left: 160px;
+    top: 40px;
+}
+
+#hex3 {
+    left: 360px;
+    top: -420px;
+}
+
+#hex4 {
+    left: 530px;
+    top: -380px;
+}
+
+#icon {
+    z-index: 2;
+}
+
+@media screen and (max-width: 500px) {
+    .hex-layers {
+        padding: 2%;
+        margin: auto;
+        position: absolute;
+    }
+    #hex2 {
+        left: 2px;
+        top: 100px;
+    }
+    #hex3 {
+        left: 2px;
+        top: 200px;
+    }
+    #hex4 {
+        left: 2px;
+        top: 300px;
+    }
+}
