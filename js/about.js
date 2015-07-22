@@ -1,22 +1,22 @@
 $(document).ready(function(){
-	$("#history").hover(function(){
-	    $(this).text("Seven years ago, I picked up a camera and took a photo of a flower. I haven't put it down since.");
+	$("#hex1").hover(function(){
+	    $("#history").text("Seven years ago, I picked up a camera and took a photo of a nearby flower in bloom. I haven't put it down since.");
 	}, function() {
-	    $(this).text("HISTORY");
+	    $("#history").text("HISTORY");
 	});
-	$("#equipment").hover(function(){
-	    $(this).text("I alternatively shoot with a Canon SX280 HS and Canon ElPH 110 HS.");
+	$("#hex2").hover(function(){
+	    $("#equipment").text("I alternatively shoot with a Canon SX280 HS and Canon ElPH 110 HS.");
 	}, function() {
-	    $(this).text("EQUIPMENT");
+	    $("#equipment").text("EQUIPMENT");
 	});
-	$("#travels").hover(function(){
-	    $(this).text("I alternatively shoot with a Canon SX280 HS and Canon ElPH 110 HS.");
+	$("#hex3").hover(function(){
+	    $("#travels").text("My strange obsession with botanical photography has followed me to Seattle, Denver, Phoenix, and Vietnam.");
 	}, function() {
-	    $(this).text("TRAVELS");
+	    $("#travels").text("TRAVELS");
 	});
-	$("#why").hover(function(){
-	    $(this).text("Every plant has a story that fascinates me and hopefully you as well.");
+	$("#hex4").hover(function(){
+	    $("#why").text("Every plant has a story.");
 	}, function() {
-	    $(this).text("WHY");
+	    $("#why").text("WHY");
 	});
 });
