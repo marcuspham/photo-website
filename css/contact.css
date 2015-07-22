@@ -64,8 +64,8 @@ body {
 }
 
 #icon-wrapper text {
-	color: transparent;
-	-webkit-transform:translateY(-200%);
+    color: transparent;
+    -webkit-transform:translateY(-200%);
     -moz-transform:translateY(-200%);
     transform:translateY(-100%);
     -webkit-transition: all 0.5s ease-in-out;
@@ -74,8 +74,8 @@ body {
 }
 
 #icon-wrapper:hover text {
-	color: white;
-	-webkit-transform:translateY(0px);
+    color: white;
+    -webkit-transform:translateY(0px);
     -moz-transform:translateY(0px);
     transform:translateY(0px) -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
