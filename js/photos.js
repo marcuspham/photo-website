@@ -25,12 +25,11 @@ function displayPhotos() {
 			img.attr('src', 'img/' + genus + '/' + photoArray[genus][j]);
 			// img.attr('name', genus);
 			$(".genus-container:last-of-type").append(img);
-			img.click(function() {
-				alert();
+			$("#description").on("click", "img", function() {
 				var modalImage = $(this).clone();
 				modalImage.addClass('modal-img');
 				var modalBody = $('.modal-body');
-				$('.modal-title').text($(this).attr('name'));
+				$('.modal-title').text($(this).parent().attr('name'));
 				modalBody.text('');
 				modalBody.append(modalImage);
 				var modal = $('#photo-modal');
@@ -44,6 +43,8 @@ function displayPhotos() {
 
 function toggleGenus() {
 	$(".genus-container").on("click", function() {
+		var genus = $(this).attr('name');
+		var genusString = '<h2><strong>Genus: </strong>' + genus + '</h2>';
 		if ($("#description").css("display") == 'none') {
 			$("#description").show();
 			$("#description").append('<hr width="50%"></hr>');
@@ -51,16 +52,14 @@ function toggleGenus() {
 			var genusBlock = $(".genus-container:first-of-type");
 			genusBlock.children("img").css("display", "inline-block");
 			genusBlock.remove("span");
-			var genus = $(this).attr('name');
-			$("#description").prepend('<h2>' + genus + '</h2>');
+			$("#description").prepend(genusString);
 		} else if ($(this) != genusBlock) {
 			var genusBlock = $(".genus-container:first-of-type");
 			var copy = $(this).clone();
-			var genus = copy.attr('name');
 			genusBlock.replaceWith(copy);
 			copy.children("img").css("display", "inline-block");
 			copy.remove("span");
-			$("#description h2").replaceWith('<h2>' + genus + '</h2>');
+			$("#description h2").replaceWith(genusString);
 		}
 	});
 	$("#remove").on("click", function() {

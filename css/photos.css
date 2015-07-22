@@ -5,6 +5,12 @@ body {
 	background-attachment: fixed;
 }
 
+h2 {
+	font-family: "Quicksand";
+	font-size: 18px;
+	color: #FFF;
+}
+
 img {
 	width: 100px;
 	height: 100px;
@@ -23,6 +29,14 @@ img:first-of-type {
 
 #description {
 	display: none;
+}
+
+button {
+	margin-left: 10px;
+}
+
+.modal {
+	position: absolute;
 }
 
 .genus-container {
