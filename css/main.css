@@ -39,6 +39,8 @@ body.active { /* Adjust body according to sidebar */
 	margin: 0;
 	background-color: rgba(0, 0, 0, 0.7);
 	z-index: -1;
+	border: 2px ridge rgba(295, 295, 295, 0.5);
+	border-bottom: none;
 }
 
 #main-overlay.active { /* Adjust overlay according to sidebar */
@@ -54,7 +56,7 @@ body.active { /* Adjust body according to sidebar */
 	left: 3px;
 	font-size: 2em;
 	color: white;
-	z-index: 3;
+	z-index: 4;
 }
 
 #hamburger:hover, #hamburger.active {
@@ -76,7 +78,7 @@ body.active { /* Adjust body according to sidebar */
 	background: url(../img/Aphelandra/IMG_2184b.JPG) no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	border-right: solid 1px white;
+	border-right: solid 1px darkgrey;
 	z-index: 0;
 	-moz-box-shadow: inset -5px -5px 15px #888;
 	-webkit-box-shadow: inset -5px -5px 15px #888;
@@ -177,4 +179,16 @@ body.active { /* Adjust body according to sidebar */
 .nav-pills>li>a:hover::before {
   	bottom: auto;
   	top: 0;
+}
+
+#copyright {
+	position: fixed;
+  	bottom: 0px;
+  	left: 0px;
+  	width: 275px;
+  	margin: 10px;
+  	color: rgba(295, 295, 295, 0.5);
+  	font-family: 'Quicksand';
+  	z-index: 4;
+  	font-size: 11px;
 }
