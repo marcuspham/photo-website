@@ -1,4 +1,9 @@
-//Changes text inside hexagons when mouse hovers over them
+/*
+ * Nam Pham Photography Website
+ * Contact Page JS
+ */
+ 
+ //Changes text inside hexagons when mouse hovers over them
 $(document).ready(function(){
 	$("#hex1").hover(function(){
 	    $("#history").text("Seven years ago, I picked up a camera and took a photo of a nearby flower in bloom. I haven't put it down since.");
