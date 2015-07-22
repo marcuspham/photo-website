@@ -1,6 +1,8 @@
 // Collapse or reveal the sidebar when the hamburger is clicked.
 $(document).ready(function(e) {   
   $('#hamburger').click(function() {
+
+	console.log("You pushed the burger");
     
     var sidebar = $('.sidebar');
     var showing = (sidebar.css('display') != 'none');
