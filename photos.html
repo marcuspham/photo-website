@@ -47,9 +47,13 @@
 
     	<div id="main">
       		<div id="main-overlay"></div>
-      			<h1>Nam Pham's Photos</h1>
+      			<h1>Seen Through the Lens</h1>
 				<div id="photo-container">
-					<div id="description"></div>
+					<div id="description">
+						<button id="remove" type="button" class="btn btn-danger" aria-label="Remove">
+  							<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+						</button>
+					</div>
 				</div>
 
 				<!-- Photo Display Modal -->
@@ -66,7 +70,7 @@
 				        <img src="" alt="" />
 				      </div>
 				      <div class="modal-footer">
-				        <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-danger close-modal" data-dismiss="modal">Close</button>
 				      </div>
 				    </div>
 
