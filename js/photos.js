@@ -1,9 +1,9 @@
 "use strict";
 
-var MAX_GENUS = 12;
+var MAX_GENUS = 12; // Constant number of genuses to be displayed
 
-var photoArray = {};
-var images = [];
+var photoArray = {}; // Psuedo-JSON Object
+var images = []; // Array of image objects
 
 window.onload = function() {
 	parseFileToJSON();
@@ -12,19 +12,36 @@ window.onload = function() {
 	// animatePhotos();
 };
 
+// Loops through genuses and images to sort images into respective genus containers
+// corresponding to the images appropriate genus
 function displayPhotos() {
-
-	// DISPLAYING PHOTOS WITH JSON
 	var keys = Object.keys(photoArray);
 	for (var i = 0; i < MAX_GENUS; i++) {
 		var genus = keys[i];
 		$("#photo-container").append('<div class="genus-container" name="' + genus + '"</div>');
-		// $(".genus-container:last-of-type").append('<span class="genus">' + genus + '</span>');
+		$(".genus-container:last-of-type").append('<span class="genus">' + genus + '</span>');
+		// Adjust text in spans to fit divs
+		var adjustTextSize = function() {
+			var objSpan = $('.genus:last-of-type');  
+			var intDivWidth = $('.genus-container:last-of-type').width();  
+			var intResultSize;  
+			for (var intFontSize = 1; intFontSize < 100; intFontSize++)  {
+  				objSpan.css('font-size', intFontSize);  
+  				if (objSpan.width() > intDivWidth) {  
+    				intResultSize = intFontSize - 1;  
+    				break;  
+  				}  
+			}
+			objSpan.css('font-size', intResultSize);
+		}
+		adjustTextSize();
+		// Append the images to the div
 		for (var j = 0; j < photoArray[genus].length; j++) {
 			var img = $(document.createElement('img'));
 			img.attr('src', 'img/' + genus + '/' + photoArray[genus][j]);
-			// img.attr('name', genus);
 			$(".genus-container:last-of-type").append(img);
+			// Upon clicking upon an image in the Description div,
+			// will bring up modal with title Genus and larger picture
 			$("#description").on("click", "img", function() {
 				var modalImage = $(this).clone();
 				modalImage.addClass('modal-img');
@@ -41,27 +58,35 @@ function displayPhotos() {
 
 }
 
+// Fills the description div with cloned genus-container and title
+// Clicking on the same genus-container as in Description div will do nothing
+// Clicking on a different genus-container will replace elements in 
+// the Description div, updating the elements to match the newly clicked element
 function toggleGenus() {
 	$(".genus-container").on("click", function() {
 		var genus = $(this).attr('name');
 		var genusString = '<h2><strong>Genus: </strong>' + genus + '</h2>';
+		var removeSpan = function() {
+			$("span").remove(".genus-container:first-of-type .genus");
+		};
 		if ($("#description").css("display") == 'none') {
 			$("#description").show();
 			$("#description").append('<hr width="50%"></hr>');
 			$(this).clone().prependTo($("#description"));
 			var genusBlock = $(".genus-container:first-of-type");
 			genusBlock.children("img").css("display", "inline-block");
-			genusBlock.remove("span");
+			removeSpan();
 			$("#description").prepend(genusString);
 		} else if ($(this) != genusBlock) {
 			var genusBlock = $(".genus-container:first-of-type");
 			var copy = $(this).clone();
 			genusBlock.replaceWith(copy);
 			copy.children("img").css("display", "inline-block");
-			copy.remove("span");
+			removeSpan();
 			$("#description h2").replaceWith(genusString);
 		}
 	});
+	// Upon clicking on the 'X', empties and hides the Description div
 	$("#remove").on("click", function() {
 		$("#description").contents().filter(function () {
     		return this.id != "remove";
@@ -71,6 +96,7 @@ function toggleGenus() {
 }
 
 // Creates Psuedo-JSON Object
+// Most of the text file is excluded in order to optimize load times
 function parseFileToJSON() {
 	var textFile = ["img/+Laburnocytisus/IMG_4527.JPG",
 	"img/+Laburnocytisus/IMG_4530.JPG",
@@ -583,6 +609,7 @@ function parseFileToJSON() {
 	}
 }
 
+// Animates the photos
 function animatePhotos() {
 
 }
