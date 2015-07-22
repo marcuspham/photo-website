@@ -8,12 +8,13 @@
     <meta name="author" content="Christy Pham">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript"src="js/contact.js"></script>
     <script type="text/javascript"src="js/about.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/about.css">
+<<<<<<< HEAD
     <link rel="shortcut icon" href="img/logo.png">
 
     <!--<script type="text/javascript">
@@ -23,10 +24,10 @@
     });</script>
 
   -->
+=======
+>>>>>>> dd83123e0f72cd4b34be5820a5caa930a57a7324
   </head>
-
   <body> 
-    <!-- Copy sidebar/menu into all pages -->
     <span id="hamburger" class="glyphicon glyphicon-menu-hamburger"></span>
 
     <div class="sidebar"> 
@@ -39,30 +40,29 @@
       </a>  
       <div id="menu-wrapper">
         <ul id="menu" class="nav nav-pills nav-stacked">
-          <li role="presentation" class="active"><a href="index.html">HOME</a></li>
-          <li role="presentation"><a href="about.html">ABOUT</a></li>
+          <li role="presentation"><a href="index.html">HOME</a></li>
+          <li role="presentation" class="active"><a href="about.html">ABOUT</a></li>
           <li role="presentation"><a href="photos.html">PHOTOS</a></li>
           <li role="presentation"><a href="contact.html">CONTACT</a></li>
         </ul>
       </div>
-      <h3 id="copyright"> &copy NAM PHAM PHOTOGRAPHY. <br/> ALL RIGHTS RESERVED </h3>
+      <h3 id="copyright"> &copy; NAM PHAM PHOTOGRAPHY. <br/> ALL RIGHTS RESERVED </h3>
     </div>
-    <!-- End of sidebar/menu -->
-
+   
     <div id="main">
       <div id="main-overlay"></div>
       <h1> A Bit About Me </h1>
       <div class="hex-layers">
-        <div class="hex">
+        <div id="hex1" class="hex">
           <p id="history">HISTORY</p>
         </div>
-        <div class="hex" style="left:180px; top: 25px">
+        <div id="hex2" class="hex" style="left:160px; top: 40px">
           <p id="equipment">EQUIPMENT</p>
         </div>
-        <div class="hex" style="left:350px; top: -380px">
+        <div id="hex3" class="hex" style="left:360px; top: -420px">
           <p id="travels">TRAVELS</p>
         </div>
-        <div class="hex" style="left:540px; top: -360px">
+        <div id="hex4" class="hex" style="left:530px; top: -380px">
           <p id="why">WHY</p>
         </div>
       </div>

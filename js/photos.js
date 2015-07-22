@@ -1,68 +1,143 @@
+/*
+ * Nam Pham's Photo Garden page
+ * Development: Matthew Pham, Marcus Pham
+ * Updated July 22, 2015
+ *
+ * Displays gallery of plant photos by genus.
+ * Allows user to click on genus to see more plants,
+ * as well as individual plants.
+ *
+ * Todo: Upload image files to server
+ */
+
+
+// Module pattern to encapsulate vars
+(function() {
+
 "use strict";
 
-var MAX_GENUS = 10;
+var MAX_GENUS = 12; // Constant number of genuses to be displayed
 
-var photoArray = {};
-var images = [];
+var photoArray = {}; // Psuedo-JSON Object
+var images = []; // Array of image objects
 
 window.onload = function() {
 	parseFileToJSON();
 	displayPhotos();
-	// toggleGenus();
-	// animatePhotos();
+	toggleGenus();
 };
 
+// Loops through genuses and images to sort images into respective genus containers
+// corresponding to the images appropriate genus
 function displayPhotos() {
-
-	// DISPLAYING PHOTOS WITH JSON
 	var keys = Object.keys(photoArray);
 	for (var i = 0; i < MAX_GENUS; i++) {
 		var genus = keys[i];
 		$("#photo-container").append('<div class="genus-container" name="' + genus + '"</div>');
-		// $(".genus-container:last-of-type").append('<span class="genus">' + genus + '</span>');
+		$(".genus-container:last-of-type").append('<span class="genus">' + genus + '</span>');
+		// Adjust text in spans to fit divs
+		/* var adjustTextSize = function() {
+			var objSpan = $('.genus:last-of-type');  
+			var intDivWidth = $('.genus-container:last-of-type').width();  
+			var intResultSize;  
+			for (var intFontSize = 1; intFontSize < 100; intFontSize++)  {
+  				objSpan.css('font-size', intFontSize);  
+  				if (objSpan.width() > intDivWidth) {  
+    				intResultSize = intFontSize - 1;  
+    				break;  
+  				}  
+			}
+			objSpan.css('font-size', intResultSize);
+		}
+		adjustTextSize(); */
+		// Append the images to the div
 		for (var j = 0; j < photoArray[genus].length; j++) {
 			var img = $(document.createElement('img'));
 			img.attr('src', 'img/' + genus + '/' + photoArray[genus][j]);
-			img.attr('name', genus);
-
-			img.click(function() {
+			$(".genus-container:last-of-type").append(img);
+			// Upon clicking upon an image in the Description div,
+			// will bring up modal with title Genus and larger picture
+			$("#description").on("click", "img", function() {
 				var modalImage = $(this).clone();
 				modalImage.addClass('modal-img');
 				var modalBody = $('.modal-body');
-				$('.modal-title').text($(this).attr('name'));
+				$('.modal-title').text($(this).parent().attr('name'));
+
+				var funFacts = [
+					"Fruit is a botanical term and Vegetable is a culinary term, so certain vegetation such as tomatoes, green beans, eggplants, and cucumbers could be called either fruits or vegetables.",
+					"A herb is specifically from the leaf of a plant, and a spice is from the seed, berry, stem, bark, root or bulb.",
+					"Plants are capable of recognizing their siblings and will give them preferential treatment, competing less for valuable resources like root space than when surrounded by plants that are strangers.",
+					'One third of the plant life on the island of Socotra near Yemen can’t be found anywhere else on Earth. It has been described as "most alien-looking place on Earth".',
+					"Scientists were able to revive a flowering plant from the fossilized fruit found in the stomach of an Arctic ground squirrel who was trapped in ice around 32,000 years ago.",
+					"There’s a garden in England dedicated to plants that kill.",
+					"Caffeine evolved as a natural insecticide. It paralyzes and kills insects that attempt to feed on the plants containing the chemical.",
+					"Cabbage, kale, cauliflower, Brussels sprouts, broccoli, Chinese cabbage and savoy are all the same species of plant, but are so selectively bred that they no longer resemble one another.",
+					"Native Americans planted corn, beans, and squash together because corn provides a structure for the beans to climb, beans provide the nitrogen to the soil that the other plants utilize, and the squash spreads along the ground preventing weeds.",
+					"The smell of freshly cut grass is actually a plant distress call.",
+					"When some plants are being eaten by caterpillars, they send chemical signals to parasitic wasps who swarm and attack the caterpillars.",
+					"Mustard and wasabi aren’t spicy until they are crushed. When the plant’s cells are damaged, two otherwise harmless components mix and produce allyl isothiocyanate, the compound responsible for the familiar pungent taste.",
+					"The entire dandelion plant is edible. Its leaves provide your recommended daily intake of Vitamin K, its flowers can be used to make wine, its root can be used to make a brewed drink that tastes a bit like coffee, and its also used in several soft drinks.",
+					"Figs are not always considered vegan. When pollinated by a fig-wasp, the fig’s inward facing flowers trap the wasp, and the corpse is digested by enzymes in the fig.",
+					"A Bonsai Orange Tree will actually produce tiny oranges.",
+					"The average tree is made up of 99% dead cells. The only living parts are the leaves, root tips, and phloem, which is a thin layer of under bark that acts as a food delivery system.",
+					"The heaviest tree in the world is also the heaviest single organism. It’s an entire forest in Utah, made up of one single tree, called a Quaking Aspen. It weights 6,000,000 Kg.",
+					"The locations of the oldest tree in the world, Methuselah, and the tallest tree in the world, Hyperion, are closely guarded secrets. Only a handful of scientists know the exact locations of the trees."
+				];
+				var randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+
 				modalBody.text('');
 				modalBody.append(modalImage);
+				modalBody.append('<h2>Freshly-Picked Fun Fact! :D</h2>');
+				modalBody.append('<p>' + randomFact + '</p>');
 
 				var modal = $('#photo-modal');
-				$('.close-modal').click(function() { modal.hide() });
 				modal.show();
+				$('.close-modal').click(function() { modal.hide() });
 			});
-
-			$(".genus-container:last-of-type").append(img);
-
 		}
 	}
 
 }
 
+// Fills the description div with cloned genus-container and title
+// Clicking on the same genus-container as in Description div will do nothing
+// Clicking on a different genus-container will replace elements in 
+// the Description div, updating the elements to match the newly clicked element
 function toggleGenus() {
 	$(".genus-container").on("click", function() {
-		if ($(this).children("img:last-of-type").css("display") == 'none') {
+		var genus = $(this).attr('name');
+		var genusString = '<h2><strong>Genus: </strong>' + genus + '</h2>';
+		var removeSpan = function() {
+			$("span").remove(".genus-container:first-of-type .genus");
+		};
+		if ($("#description").css("display") == 'none') {
 			$("#description").show();
-			$("#description").prepend('<hr width="50%"></hr>');
+			$("#description").append('<hr width="50%"></hr>');
 			$(this).clone().prependTo($("#description"));
-			$(".genus-container:first-of-type").children("img").css("display", "inline-block");
-			var genus = $(this).attr('name');
-			$("#photo-container").prepend('<h2>' + genus + '</h2>');
-			$(this).children("img").css("display", "inline-block");
-		} else {
-			$(this).children("img").css("display", "none");
-			$(this).children("img:first-of-type").css("display", "inline-block");
+			var genusBlock = $(".genus-container:first-of-type");
+			genusBlock.children("img").css("display", "inline-block");
+			removeSpan();
+			$("#description").prepend(genusString);
+		} else if ($(this) != genusBlock) {
+			var genusBlock = $(".genus-container:first-of-type");
+			var copy = $(this).clone();
+			genusBlock.replaceWith(copy);
+			copy.children("img").css("display", "inline-block");
+			removeSpan();
+			$("#description h2").replaceWith(genusString);
 		}
 	});
+	// Upon clicking on the 'X', empties and hides the Description div
+	$("#remove").on("click", function() {
+		$("#description").contents().filter(function () {
+    		return this.id != "remove";
+		}).remove();
+		$("#description").hide();
+	})
 }
 
 // Creates Psuedo-JSON Object
+// Most of the text file is excluded in order to optimize load times
 function parseFileToJSON() {
 	var textFile = ["img/+Laburnocytisus/IMG_4527.JPG",
 	"img/+Laburnocytisus/IMG_4530.JPG",
@@ -115,7 +190,7 @@ function parseFileToJSON() {
 	"img/Acanthostachys/IMG_0832.JPG",
 	"img/Acanthostachys/IMG_1418.JPG",
 	"img/Acanthostachys/IMG_1754.JPG",
-	"img/Acanthus/IMG_3148.jpg",
+	"img/Acanthus/IMG_3148.jpg" /*,
 	"img/Acanthus/IMG_3151.jpg",
 	"img/Acanthus/IMG_6783.JPG",
 	"img/Acca/IMG_1092_2.JPG",
@@ -133,7 +208,7 @@ function parseFileToJSON() {
 	"img/Acer/IMG_8201.JPG",
 	"img/Acer/IMG_9644.JPG",
 	"img/Acer/IMG_9649.JPG",
-	"img/Acer/IMG_9669.JPG"/*,
+	"img/Acer/IMG_9669.JPG",
 	"img/Achillea/IMG_0480.JPG",
 	"img/Achillea/IMG_2021.JPG",
 	"img/Achillea/IMG_2026.JPG",
@@ -559,7 +634,7 @@ function parseFileToJSON() {
 	"img/Azolla/IMG_3196.JPG",
 	"img/Azolla/IMG_8593.JPG",
 	"img/Azorella/IMG_3418.JPG",
-	"img/Azorella/IMG_3420.JPG"*/];
+	"img/Azorella/IMG_3420.JPG" */];
 	for (var i = 0; i < textFile.length; i++) {
 		var line = textFile[i];
 		var tokens = line.split("/");
@@ -575,6 +650,4 @@ function parseFileToJSON() {
 	}
 }
 
-function animatePhotos() {
-
-}
+}) ();

@@ -57,6 +57,7 @@ body.active { /* Adjust body according to sidebar */
 	font-size: 2em;
 	color: white;
 	z-index: 4;
+	cursor: pointer;
 }
 
 #hamburger:hover, #hamburger.active {
