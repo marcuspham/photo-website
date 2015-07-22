@@ -92,6 +92,10 @@ body {
 	border-color: white;
 }
 
+.has-error .form-control::-webkit-input-placeholder {
+	color: #a94442;
+}
+
 .col-centered{
 	float: none;
 	margin: 0 auto;

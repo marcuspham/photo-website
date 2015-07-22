@@ -75,20 +75,20 @@
 			<div id="leaveNote">
 				<h1> Leave a note </h1>
 				  <div ng-app="myApp" ng-controller="myCtrl">
-				  	<form class="form-horizontal" role="form" name="myForm" novalidate>
-				    	<div class="form-group">
+				  	<form class="form-horizontal" role="form" name="myForm">
+				    	<div class="form-group" ng-class="{'has-error' : (myForm.name.$invalid && myForm.name.$touched)}">
 				    		<div class="col-xs-12 col-centered">
 						       	<input name="name" class="form-control" ng-required="true" ng-model="user.name" placeholder="{{(myForm.name.$invalid && myForm.name.$touched) ? '* Your name' : 'Your name'}}" required> </input> 	 
 						    </div>
 				    	</div>
 
-				    	<div class="form-group">
+				    	<div class="form-group" ng-class="{'has-error' : (myForm.email.$invalid && myForm.email.$touched)}">
 				    		<div class="col-xs-12 col-centered">
 						       	<input name="email" class="form-control" ng-required="true" ng-model="user.email" placeholder="{{(myForm.email.$invalid && myForm.email.$touched) ? '* Your email' : 'Your email'}}" required> </input>
 						    </div>
 				    	</div> 
 
-				    	<div class="form-group">
+				    	<div class="form-group" ng-class="{'has-error' : (myForm.phone.$invalid && myForm.phone.$touched)}">
 				    		<div class="col-xs-12 col-centered">
 						       	<input name="phone" class="form-control" ng-required="true" ng-model="user.phone" placeholder="{{(myForm.phone.$invalid && myForm.phone.$touched) ? '* Your phone' : 'Your phone'}}" required> </input>
 						    </div>
