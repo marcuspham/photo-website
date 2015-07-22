@@ -1,5 +1,8 @@
 body {
 	position: absolute;
+	background-image: url(../img/Abelmoschus/IMG_2144.JPG);
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 img {
@@ -14,7 +17,12 @@ img:first-of-type {
 }
 
 #photo-container {
+	margin-top: 2.5%;
 	margin-left: 2.5%;
+}
+
+#description {
+	display: none;
 }
 
 .genus-container {
@@ -39,4 +47,13 @@ img:first-of-type {
 
 .genus:hover {
 	opacity: 1;
+}
+
+.modal {
+	text-align: center;
+}
+
+.modal-img {
+	width: 100%;
+	height: 100%;
 }
