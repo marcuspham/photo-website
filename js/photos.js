@@ -62,8 +62,34 @@ function displayPhotos() {
 				modalImage.addClass('modal-img');
 				var modalBody = $('.modal-body');
 				$('.modal-title').text($(this).parent().attr('name'));
+
+				var funFacts = [
+					"Fruit is a botanical term and Vegetable is a culinary term, so certain vegetation such as tomatoes, green beans, eggplants, and cucumbers could be called either fruits or vegetables.",
+					"A herb is specifically from the leaf of a plant, and a spice is from the seed, berry, stem, bark, root or bulb.",
+					"Plants are capable of recognizing their siblings and will give them preferential treatment, competing less for valuable resources like root space than when surrounded by plants that are strangers.",
+					'One third of the plant life on the island of Socotra near Yemen can’t be found anywhere else on Earth. It has been described as "most alien-looking place on Earth".',
+					"Scientists were able to revive a flowering plant from the fossilized fruit found in the stomach of an Arctic ground squirrel who was trapped in ice around 32,000 years ago.",
+					"There’s a garden in England dedicated to plants that kill.",
+					"Caffeine evolved as a natural insecticide. It paralyzes and kills insects that attempt to feed on the plants containing the chemical.",
+					"Cabbage, kale, cauliflower, Brussels sprouts, broccoli, Chinese cabbage and savoy are all the same species of plant, but are so selectively bred that they no longer resemble one another.",
+					"Native Americans planted corn, beans, and squash together because corn provides a structure for the beans to climb, beans provide the nitrogen to the soil that the other plants utilize, and the squash spreads along the ground preventing weeds.",
+					"The smell of freshly cut grass is actually a plant distress call.",
+					"When some plants are being eaten by caterpillars, they send chemical signals to parasitic wasps who swarm and attack the caterpillars.",
+					"Mustard and wasabi aren’t spicy until they are crushed. When the plant’s cells are damaged, two otherwise harmless components mix and produce allyl isothiocyanate, the compound responsible for the familiar pungent taste.",
+					"The entire dandelion plant is edible. Its leaves provide your recommended daily intake of Vitamin K, its flowers can be used to make wine, its root can be used to make a brewed drink that tastes a bit like coffee, and its also used in several soft drinks.",
+					"Figs are not always considered vegan. When pollinated by a fig-wasp, the fig’s inward facing flowers trap the wasp, and the corpse is digested by enzymes in the fig.",
+					"A Bonsai Orange Tree will actually produce tiny oranges.",
+					"The average tree is made up of 99% dead cells. The only living parts are the leaves, root tips, and phloem, which is a thin layer of under bark that acts as a food delivery system.",
+					"The heaviest tree in the world is also the heaviest single organism. It’s an entire forest in Utah, made up of one single tree, called a Quaking Aspen. It weights 6,000,000 Kg.",
+					"The locations of the oldest tree in the world, Methuselah, and the tallest tree in the world, Hyperion, are closely guarded secrets. Only a handful of scientists know the exact locations of the trees."
+				];
+				var randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+
 				modalBody.text('');
 				modalBody.append(modalImage);
+				modalBody.append('<h2>Freshly-Picked Fun Fact! :D</h2>');
+				modalBody.append('<p>' + randomFact + '</p>');
+
 				var modal = $('#photo-modal');
 				modal.show();
 				$('.close-modal').click(function() { modal.hide() });

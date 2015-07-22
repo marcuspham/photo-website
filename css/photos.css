@@ -23,8 +23,7 @@ img:first-of-type {
 }
 
 #photo-container {
-	margin-top: 2.5%;
-	margin-left: 2.5%;
+	margin: 2.5%;
 }
 
 #description {
