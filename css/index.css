@@ -23,6 +23,11 @@ div.container.fill, #myCarousel, #carousel-dot-overlay,
 	border-bottom: none;
 }
 
+#frame.active { /* Adjust frame according to sidebar */
+	left: 0px;
+	width: 100%;
+}
+
 #myCarousel {
 	position: relative;
 	z-index: -1;
