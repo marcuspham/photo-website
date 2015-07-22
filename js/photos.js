@@ -21,7 +21,7 @@ function displayPhotos() {
 		$("#photo-container").append('<div class="genus-container" name="' + genus + '"</div>');
 		$(".genus-container:last-of-type").append('<span class="genus">' + genus + '</span>');
 		// Adjust text in spans to fit divs
-		var adjustTextSize = function() {
+		/* var adjustTextSize = function() {
 			var objSpan = $('.genus:last-of-type');  
 			var intDivWidth = $('.genus-container:last-of-type').width();  
 			var intResultSize;  
@@ -34,7 +34,7 @@ function displayPhotos() {
 			}
 			objSpan.css('font-size', intResultSize);
 		}
-		adjustTextSize();
+		adjustTextSize(); */
 		// Append the images to the div
 		for (var j = 0; j < photoArray[genus].length; j++) {
 			var img = $(document.createElement('img'));
