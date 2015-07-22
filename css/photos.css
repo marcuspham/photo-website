@@ -1,5 +1,8 @@
 body {
 	position: absolute;
+	background-image: url(../img/Abelmoschus/IMG_2144.JPG);
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 img {
@@ -14,6 +17,7 @@ img:first-of-type {
 }
 
 #photo-container {
+	margin-top: 2.5%;
 	margin-left: 2.5%;
 }
 

@@ -1,5 +1,7 @@
 "use strict";
 
+var MAX_GENUS = 10;
+
 var photoArray = {};
 var images = [];
 
@@ -14,20 +16,20 @@ function displayPhotos() {
 
 	// DISPLAYING PHOTOS WITH JSON
 	var keys = Object.keys(photoArray);
-	for (var i = 0; i < keys.length; i++) {
+	for (var i = 0; i < MAX_GENUS; i++) {
 		var genus = keys[i];
 		$("#photo-container").append('<div class="genus-container" name="' + genus + '"</div>');
 		// $(".genus-container:last-of-type").append('<span class="genus">' + genus + '</span>');
 		for (var j = 0; j < photoArray[genus].length; j++) {
-			
 			var img = $(document.createElement('img'));
 			img.attr('src', 'img/' + genus + '/' + photoArray[genus][j]);
+			img.attr('name', genus);
 
 			img.click(function() {
 				var modalImage = $(this).clone();
 				modalImage.addClass('modal-img');
 				var modalBody = $('.modal-body');
-				$('.modal-title').text(genus);
+				$('.modal-title').text($(this).attr('name'));
 				modalBody.text('');
 				modalBody.append(modalImage);
 
